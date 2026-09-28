@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+
+  <object class="AdwPreferencesWindow" id="preferences_dialog">
+    <property name="title" translatable="yes">Preferencias</property>
+    <property name="modal">True</property>
+    <property name="resizable">False</property>
+    <property name="default-width">550</property>
+    <property name="default-height">510</property>
+
+    <child>
+      <object class="AdwPreferencesPage">
+
+        <!-- Grupo: Calidad de Audio -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Calidad de Audio</property>
+            <property name="description" translatable="yes">Formato predeterminado para nuevos proyectos</property>
+
+            <child>
+              <object class="AdwComboRow" id="pref_combo_audio">
+                <property name="title" translatable="yes">Formato predeterminado</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">PCM / LPCM (Sin compresión)</item>
+                      <item translatable="yes">AC3 (Dolby Digital)</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <!-- Grupo: Sistema -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Sistema</property>
+
+            <child>
+              <object class="AdwComboRow" id="pref_combo_language">
+                <property name="title" translatable="yes">Idioma de la interfaz</property>
+                <property name="subtitle" translatable="yes">Requiere reiniciar la aplicación para aplicarse por completo</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item>English</item>
+                      <item>Español</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="pref_switch_location">
+                <property name="title" translatable="yes">Recordar última ubicación</property>
+                <property name="subtitle" translatable="yes">Abre por defecto la última carpeta utilizada al guardar</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="pref_switch_multithread">
+                <property name="title" translatable="yes">Procesamiento multihilo</property>
+                <property name="subtitle" translatable="yes">Acelera la conversión usando todos los núcleos del procesador</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="pref_switch_notifications">
+                <property name="title" translatable="yes">Notificar al completar</property>
+                <property name="subtitle" translatable="yes">Envía un aviso de escritorio cuando finalice la generación</property>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.marcopcabrera.HiFiDvdMaker</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>HiFiDvdMaker</name>
+  <summary>Create high-fidelity audio DVDs from your music collection</summary>
+
+  <description>
+    <p>
+      HiFiDvdMaker is a modern application built with GTK4 and Libadwaita designed
+      to author and create high-fidelity audio DVDs with customized playback menus.
+    </p>
+    <p>Key features include:</p>
+    <ul>
+      <li>Support for high-resolution audio formats.</li>
+      <li>Audio volume normalization and TV format adaptation (NTSC/PAL).</li>
+      <li>Adaptive user interface with native GNOME integration.</li>
+    </ul>
+  </description>
+
+  <developer id="io.github.marcopcabrera">
+    <name>Marco P. Cabrera</name>
+  </developer>
+
+  <!-- URLs del proyecto -->
+  <url type="homepage">https://github.com/marcopcabrera/HiFiDvdMaker</url>
+  <url type="vcs-browser">https://github.com/marcopcabrera/HiFiDvdMaker</url>
+  <url type="bugtracker">https://github.com/marcopcabrera/HiFiDvdMaker/issues</url>
+
+  <translation type="gettext">hifidvdmaker</translation>
+  <launchable type="desktop-id">io.github.marcopcabrera.HiFiDvdMaker.desktop</launchable>
+  <content_rating type="oars-1.1" />
+
+  <!-- Colores de marca -->
+  <branding>
+    <color type="primary" scheme_preference="light">#3584e4</color>
+    <color type="primary" scheme_preference="dark">#1e5b9e</color>
+  </branding>
+
+  <!-- Capturas de pantalla -->
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/marcopcabrera/HiFiDvdMaker/main/data/screenshots/main.png</image>
+      <caption>Main application interface</caption>
+    </screenshot>
+  </screenshots>
+
+  <!-- Historial de versiones -->
+  <releases>
+    <release version="0.1.0" date="2026-09-28">
+      <description>
+        <p>Initial public release.</p>
+      </description>
+    </release>
+  </releases>
+</component>

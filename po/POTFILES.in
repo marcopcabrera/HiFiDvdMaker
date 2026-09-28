@@ -1,0 +1,9 @@
+data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in
+data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in
+data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml
+src/main.py
+src/window.py
+src/dvd_engine.py
+src/window.ui
+src/shortcuts-dialog.ui
+src/preferences-dialog.ui
