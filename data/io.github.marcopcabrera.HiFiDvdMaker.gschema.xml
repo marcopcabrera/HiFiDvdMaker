@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="hifidvdmaker">
+  <schema id="io.github.marcopcabrera.HiFiDvdMaker" path="/io/github/marcopcabrera/HiFiDvdMaker/">
+
+    <key name="language" type="s">
+      <default>'system'</default>
+      <summary>Idioma de la interfaz</summary>
+      <description>Código del idioma (ej. 'es', 'de', 'ja') o 'system' para usar el del sistema operativo.</description>
+    </key>
+
+    <key name="audio-format" type="s">
+      <default>'pcm'</default>
+      <summary>Formato de audio predeterminado</summary>
+    </key>
+
+    <key name="remember-location" type="b">
+      <default>true</default>
+      <summary>Recordar última ubicación</summary>
+    </key>
+
+    <key name="multithreading" type="b">
+      <default>true</default>
+      <summary>Procesamiento multihilo</summary>
+    </key>
+
+    <key name="notify-on-complete" type="b">
+      <default>true</default>
+      <summary>Notificar al completar</summary>
+    </key>
+
+    <key name="last-folder" type="s">
+      <default>''</default>
+      <summary>Última carpeta de origen o destino</summary>
+    </key>
+
+  </schema>
+</schemalist>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+
+<template class="HiFiDvdMakerWindow" parent="AdwApplicationWindow">
+    <property name="default-width">830</property>
+    <property name="default-height">895</property>
+    <property name="width-request">830</property>
+    <property name="height-request">895</property>
+    <property name="title">HiFi DVD Maker</property>
+    <property name="icon-name">io.github.marcopcabrera.HiFiDvdMaker</property>
+
+    <property name="content">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+
+        <!-- Barra Superior -->
+        <child>
+          <object class="AdwHeaderBar">
+            <property name="show-start-title-buttons">True</property>
+            <property name="show-end-title-buttons">True</property>
+
+            <child type="end">
+              <object class="GtkButton" id="btn_generar">
+                <property name="label" translatable="yes">Crear DVD</property>
+                <property name="sensitive">False</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="suggested-action"/>
+                </style>
+              </object>
+            </child>
+
+            <child type="end">
+              <object class="GtkMenuButton" id="btn_main_menu">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Menú principal</property>
+                <property name="menu-model">main_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <!-- Contenedor Principal Centrado -->
+        <child>
+          <object class="GtkCenterBox">
+            <property name="orientation">horizontal</property>
+            <property name="vexpand">True</property>
+            <property name="hexpand">True</property>
+            <property name="margin-start">12</property>
+            <property name="margin-end">12</property>
+            <property name="margin-top">12</property>
+            <property name="margin-bottom">12</property>
+
+            <child type="center">
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
+                <property name="vexpand">True</property>
+
+                <!-- COLUMNA IZQUIERDA: ARCHIVOS DE AUDIO -->
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">12</property>
+                    <property name="hexpand">False</property>
+                    <property name="vexpand">True</property>
+                    <property name="width-request">420</property>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">1. Archivos de Audio</property>
+                        <property name="description" translatable="yes">Formatos soportados: FLAC, WAV, MP3, OGG, M4A</property>
+
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Pistas a incluir</property>
+                            <child type="suffix">
+                              <object class="GtkButton" id="btn_add_audio">
+                                <property name="icon-name">list-add-symbolic</property>
+                                <property name="valign">center</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="hscrollbar-policy">never</property>
+                        <property name="vexpand">True</property>
+                        <property name="child">
+                          <object class="GtkListBox" id="list_audio_files">
+                            <property name="selection-mode">none</property>
+                            <style>
+                              <class name="boxed-list"/>
+                            </style>
+
+                            <child>
+                              <object class="AdwStatusPage" id="status_empty_list">
+                                <property name="icon-name">audio-x-generic-symbolic</property>
+                                <property name="title" translatable="yes">No hay pistas de audio</property>
+                                <property name="description" translatable="yes">Usa el botón '+' superior para agregar archivos</property>
+                                <property name="vexpand">True</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <!-- COLUMNA DERECHA: PORTADA Y CONFIGURACIÓN -->
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">12</property>
+                    <property name="hexpand">False</property>
+                    <property name="vexpand">True</property>
+                    <property name="width-request">420</property>
+
+                    <!-- Grupo 2: Imagen de Portada -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">2. Imagen de Portada</property>
+                        <property name="description" translatable="yes">Recomendado 1024×576 px (16:9)</property>
+
+                        <child>
+                          <object class="AdwActionRow" id="row_portada">
+                            <property name="title" translatable="yes">Seleccionar carátula</property>
+                            <property name="subtitle" translatable="yes">No seleccionada</property>
+                            <child type="suffix">
+                              <object class="GtkButton" id="btn_select_cover">
+                                <property name="label" translatable="yes">Buscar...</property>
+                                <property name="valign">center</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+
+                        <!-- VISTA PREVIA DENTRO DE UNA TARJETA -->
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="margin-top">12</property>
+                            <property name="margin-bottom">2</property>
+
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">vertical</property>
+                                <property name="height-request">180</property>
+                                <property name="hexpand">True</property>
+                                <property name="vexpand">False</property>
+                                <property name="margin-start">1</property>
+                                <property name="margin-end">1</property>
+                                <style>
+                                  <class name="card"/>
+                                </style>
+                                <child>
+                                  <object class="GtkStack" id="preview_stack">
+                                    <property name="transition-type">crossfade</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+
+                                    <!-- Estado 1: AdwStatusPage compacta -->
+                                    <child>
+                                      <object class="GtkStackPage">
+                                        <property name="name">empty</property>
+                                        <property name="child">
+                                          <object class="AdwStatusPage" id="status_empty_cover">
+                                            <property name="icon-name">image-x-generic-symbolic</property>
+                                            <property name="title" translatable="yes">Sin portada seleccionada</property>
+                                            <property name="description" translatable="yes">Formatos: PNG, JPG, WEBP</property>
+                                            <style>
+                                              <class name="compact"/>
+                                            </style>
+                                          </object>
+                                        </property>
+                                      </object>
+                                    </child>
+
+                                    <!-- Estado 2: Vista previa de Imagen -->
+                                    <child>
+                                      <object class="GtkStackPage">
+                                        <property name="name">picture</property>
+                                        <property name="child">
+                                          <object class="GtkPicture" id="img_preview">
+                                            <property name="content-fit">cover</property>
+                                            <property name="can-shrink">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Vista previa en TV (16:9)</property>
+                                <property name="margin-top">4</property>
+                                <style>
+                                  <class name="dim-label"/>
+                                  <class name="caption"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <!-- Título 3 -->
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="yes">3. Ajustes de DVD y Audio</property>
+                        <property name="halign">start</property>
+                        <property name="margin-start">12</property>
+                        <property name="margin-top">2</property>
+                        <property name="margin-bottom">2</property>
+                        <style>
+                          <class name="header-title"/>
+                        </style>
+                      </object>
+                    </child>
+
+                    <!-- Área de Opciones -->
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="hscrollbar-policy">never</property>
+                        <property name="vscrollbar-policy">automatic</property>
+                        <property name="vexpand">True</property>
+
+                        <property name="child">
+                          <object class="GtkListBox">
+                            <property name="selection-mode">none</property>
+                            <style>
+                              <class name="boxed-list"/>
+                            </style>
+
+                            <child>
+                              <object class="AdwComboRow" id="combo_sistema_tv">
+                                <property name="title" translatable="yes">Norma de TV</property>
+                                <property name="subtitle" translatable="yes">PAL (25 fps / 720x576)</property>
+                                <property name="model">
+                                  <object class="GtkStringList">
+                                    <items>
+                                      <item translatable="yes">PAL (Europa)</item>
+                                      <item translatable="yes">NTSC (América / Japón)</item>
+                                    </items>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwComboRow" id="combo_formato_audio">
+                                <property name="title" translatable="yes">Formato de Audio</property>
+                                <property name="subtitle" translatable="yes">LPCM • 48 kHz / 16-bit</property>
+                                <property name="model">
+                                  <object class="GtkStringList">
+                                    <items>
+                                      <item translatable="yes">PCM (Sin compresión)</item>
+                                      <item translatable="yes">AC3 (Dolby Digital)</item>
+                                    </items>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+
+<child>
+  <object class="AdwComboRow" id="combo_tipo_dvd">
+    <property name="title" translatable="yes">Tipo de disco DVD</property>
+    <property name="model">
+      <object class="GtkStringList">
+        <items>
+          <item translatable="yes">DVD-5</item>
+          <item translatable="yes">DVD-9</item>
+        </items>
+      </object>
+    </property>
+  </object>
+</child>
+
+<child>
+  <object class="AdwActionRow" id="row_espacio_disco">
+    <property name="title" translatable="yes">Espacio en disco</property>
+    <property name="subtitle"></property>
+    <property name="activatable">False</property>
+    <child type="suffix">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="valign">center</property>
+        <property name="width-request">140</property>
+        <child>
+          <object class="GtkProgressBar" id="progress_espacio">
+            <property name="fraction">0.0</property>
+            <property name="valign">center</property>
+            <property name="vexpand">True</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Igualar volumen</property>
+                                <property name="subtitle" translatable="yes">Evita cambios bruscos (EBU R128)</property>
+                                <child type="suffix">
+                                  <object class="GtkSwitch" id="switch_normalizar">
+                                    <property name="active">True</property>
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwComboRow" id="combo_tipo_salida">
+                                <property name="title" translatable="yes">Formato de Salida</property>
+                                <property name="model">
+                                  <object class="GtkStringList">
+                                    <items>
+                                      <item translatable="yes">Imagen ISO (.iso)</item>
+                                      <item translatable="yes">Carpeta DVD (VIDEO_TS)</item>
+                                    </items>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="AdwActionRow" id="row_destino">
+                                <property name="title" translatable="yes">Ubicación de Destino</property>
+                                <property name="subtitle" translatable="yes">No seleccionada</property>
+                                <child type="suffix">
+                                  <object class="GtkButton" id="btn_select_output">
+                                    <property name="label" translatable="yes">Examinar...</property>
+                                    <property name="valign">center</property>
+                                    <style>
+                                      <class name="suggested-action"/>
+                                    </style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child>
+          </object>
+        </child>
+
+      </object>
+    </property>
+  </template>
+
+  <!-- Menú Hamburguesa -->
+  <menu id="main_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Preferencias</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Atajos de teclado</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Créditos</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

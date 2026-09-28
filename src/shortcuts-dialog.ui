@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkShortcutsWindow" id="help_overlay">
+    <property name="title" translatable="yes">Atajos de teclado</property>
+    <property name="modal">True</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">True</property>
+        <property name="title" translatable="yes">Atajos de teclado</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Acciones Principales</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Añadir pistas de audio</property>
+                <property name="accelerator">&lt;Control&gt;o</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Seleccionar portada</property>
+                <property name="accelerator">&lt;Control&gt;i</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Seleccionar destino</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;o</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Crear DVD / ISO</property>
+                <property name="accelerator">&lt;Control&gt;Return</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Aplicación</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Ver Atajos de teclado</property>
+                <property name="accelerator">F1 &lt;Control&gt;question</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Cerrar aplicación</property>
+                <property name="accelerator">&lt;Control&gt;q</property>
+              </object>
+            </child>
+          </object>
+        </child>
+     </object>
+    </child>
+  </object>
+</interface>

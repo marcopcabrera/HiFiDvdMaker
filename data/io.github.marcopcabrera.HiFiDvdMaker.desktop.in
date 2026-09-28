@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=HiFi DVD Maker
+Exec=hifidvdmaker
+Icon=io.github.marcopcabrera.HiFiDvdMaker
+StartupWMClass=io.github.marcopcabrera.HiFiDvdMaker
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;DiscBurning;
+Keywords=Audio;DVD;Burner;GTK;
+StartupNotify=true
+DBusActivatable=false
