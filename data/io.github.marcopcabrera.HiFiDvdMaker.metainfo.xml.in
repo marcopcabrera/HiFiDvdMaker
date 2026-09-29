@@ -4,19 +4,22 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
-  <name>HiFiDvdMaker</name>
+  <name>HiFi DVD Maker</name>
   <summary>Create high-fidelity audio DVDs from your music collection</summary>
 
   <description>
     <p>
-      HiFiDvdMaker is a modern application built with GTK4 and Libadwaita designed
-      to author and create high-fidelity audio DVDs with customized playback menus.
+      HiFi DVD Maker is a modern application built with GTK4 and Libadwaita designed to author and create high-fidelity audio DVDs from your music collection.
     </p>
-    <p>Key features include:</p>
+    <p>
+      Key features include:
+    </p>
     <ul>
-      <li>Support for high-resolution audio formats.</li>
-      <li>Audio volume normalization and TV format adaptation (NTSC/PAL).</li>
-      <li>Adaptive user interface with native GNOME integration.</li>
+      <li>High-Fidelity Audio Support: Author uncompressed, CD-quality (LPCM) audio DVDs.</li>
+      <li>AC3 Compression Option: Optional Dolby Digital (AC3) encoding support for space savings.</li>
+      <li>Multiple Output Formats: Export as an ISO image or a VIDEO_TS folder.</li>
+      <li>Standalone DVD Navigation: Standard DVD tracks that allow skipping forward and backward on any player.</li>
+      <li>Compilation Cover Art: Upload custom cover art for your music compilation.</li>
     </ul>
   </description>
 
