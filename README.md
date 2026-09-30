@@ -4,7 +4,7 @@
   <img src="data/screenshots/main.png" alt="HiFi DVD Maker Screenshot" width="700"/>
 </p>
 
-**HiFi DVD Maker** is a modern GTK4 / Libadwaita desktop application designed for Linux to easily author and create high-fidelity audio DVDs with custom cover art for your music compilation.
+**HiFi DVD Maker** HiFi DVD Maker is a modern GTK4 / Libadwaita desktop application designed for Linux to easily author and create high-fidelity audio DVDs with custom cover art for your music compilation, ready to burn to physical media or play directly.
 
 ## Features
 
