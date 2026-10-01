@@ -15,6 +15,8 @@ endif
 appstream_file = i18n.merge_file(
         input: 'io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in',
        output: 'io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml',
+         type: 'xml',
+    data_dirs: meson.current_source_dir(),
        po_dir: '../po',
       install: true,
   install_dir: get_option('datadir') / 'metainfo'
