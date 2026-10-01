@@ -1,4 +1,4 @@
-# Basque translation for HiFi Dvd Maker.
+# Basque translation for HiFi DVD Maker.
 # Copyright (C) 2026 Marco P. Cabrera
 # Translation by Gemini AI.
 #
@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hifidvdmaker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-27 10:46+0200\n"
-"PO-Revision-Date: 2026-09-26 20:35+0200\n"
+"POT-Creation-Date: 2026-09-30 23:30+0200\n"
+"PO-Revision-Date: 2026-10-01 05:48+0200\n"
 "Last-Translator: Gemini AI\n"
 "Language-Team: Basque\n"
 "Language: eu\n"
@@ -17,29 +17,72 @@ msgstr ""
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:2
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:7
-msgid "HiFiDvdMaker"
-msgstr "HiFiDvdMaker"
+msgid "HiFi DVD Maker"
+msgstr "HiFi DVD Maker"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:8
-msgid "GTK;"
-msgstr "GTK;"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:9
+msgid "Audio;DVD;Grabador;Grabadora;GTK;"
+msgstr "Audioa;DVD;Grabagailua;GTK;"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:8
-msgid "Keep the summary shorter, between 10 and 35 characters"
-msgstr "Sortu Hi-Fi Audio DVDak"
+msgid "Crea DVDs de audio de alta fidelidad a partir de tu colección de música"
+msgstr "Sortu kalitate handiko audio DVDak zure musika bildumatik"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:10
-msgid "No description"
-msgstr "Deskribapenik ez"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:11
+msgid ""
+"HiFi DVD Maker es una aplicación moderna basada en GTK4 / Libadwaita diseñada para Linux "
+"que permite autorizar y crear fácilmente DVDs de audio de alta fidelidad con portadas personalizadas "
+"para tu compilación musical, listos para grabar en formato físico o reproducir directamente."
+msgstr ""
+"HiFi DVD Maker GTK4 / Libadwaita-n oinarritutako Linuxerako aplikazio modernoa da, "
+"zure musikarentzat azal pertsonalizatuekin kalitate handiko audio DVDak "
+"erraz sortzeko eta zuzenean erreproduzitzeko edo grabatzeko gaitasuna duena."
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:14
-msgid "Developer name"
+msgid "Las características principales incluyen:"
+msgstr "Ezaugarri nagusiak honako hauek dira:"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:18
+msgid ""
+"Soporte de audio de alta fidelidad: Autoría de DVDs de audio sin compresión con calidad de CD (LPCM)."
+msgstr ""
+"Kalitate handiko audioa: Konpresiorik gabeko audio DVDak CD kalitatearekin (LPCM)."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:19
+msgid "Opción de compresión AC3: Soporte de codificación opcional Dolby Digital (AC3)."
+msgstr "AC3 konpresio aukera: Dolby Digital (AC3) kodetzeko aukera."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:20
+msgid ""
+"Múltiples formatos de salida: Exporta como ISO o estructura VIDEO_TS, lista para grabar en un disco DVD."
+msgstr ""
+"Irteera formatu anitzak: Eksportatu ISO edo VIDEO_TS gisa, DVDan grabatzeko prest."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:21
+msgid ""
+"Navegación de DVD estándar: Genera pistas y capítulos de DVD estándar para reproductores de DVD domésticos o de coche."
+msgstr ""
+"DVD nabigazio estandarra: Etxeko zein autoko DVD erreproduzitzaileentzako pistak sortzen ditu."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:22
+msgid "Portada de la compilación: Muestra portadas personalizadas en pantalla."
+msgstr "Bildumaren azala: Erakutsi azal pertsonalizatuak pantailan."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:23
+msgid "Soporte multilingüe: Disponible en 12 idiomas."
+msgstr "Hizkuntza anitzeko laguntza: 12 hizkuntzatan eskuragarri."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:28
+msgid "Marco P. Cabrera"
 msgstr "Marco P. Cabrera"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:52
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:56
-msgid "A caption"
-msgstr "A caption"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:50
+msgid "Interfaz principal de la aplicación"
+msgstr "Aplikazioaren interfaze nagusia"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:58
+msgid "Lanzamiento público inicial."
+msgstr "Hasierako bertsio publikoa."
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:7
 #: src/preferences-dialog.ui:45
@@ -48,14 +91,14 @@ msgstr "Interfazearen hizkuntza"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:8
 msgid ""
-"Código del idioma (ej. 'es', 'de', 'ja') o 'system' para usar el del sistema "
+"Código del idioma (ej. 'es', 'de', 'ja') or 'system' para usar el del sistema "
 "operativo."
 msgstr ""
-"Hizkuntza-kodea (adib. 'eu', 'ja') edo 'system' sistemarena erabiltzeko."
+"Hizkuntza kodea (adib. 'eu', 'es', 'de') edo 'system' sistemarena erabiltzeko."
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:13
 msgid "Formato de audio predeterminado"
-msgstr "Audio-formatu lehenetsia"
+msgstr "Nabaritutako audio formatua"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:18
 #: src/preferences-dialog.ui:60
@@ -65,7 +108,7 @@ msgstr "Gogoratu azken kokapena"
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:23
 #: src/preferences-dialog.ui:67
 msgid "Procesamiento multihilo"
-msgstr "Hari anitzeko prozesua"
+msgstr "Prozesatze harizpi-anitza"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:28
 #: src/preferences-dialog.ui:74
@@ -74,393 +117,396 @@ msgstr "Jakinarazi amaitzean"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:33
 msgid "Última carpeta de origen o destino"
-msgstr "Azken jatorri edo helburu karpeta"
+msgstr "Jatorrizko edo helmugako azken karpeta"
 
-#: src/window.py:174 src/window.ui:385 src/shortcuts-dialog.ui:4
+#: src/window.py:177 src/window.ui:386 src/shortcuts-dialog.ui:4
 #: src/shortcuts-dialog.ui:9
 msgid "Atajos de teclado"
-msgstr "Lasterbideak"
+msgstr "Laster-bideak"
 
-#: src/window.py:182 src/window.ui:136 src/window.ui:347
+#: src/window.py:185 src/window.ui:137 src/window.ui:348
 msgid "No seleccionada"
-msgstr "Aukeratu gabe"
+msgstr "Hautatu gabea"
 
-#: src/window.py:288
+#: src/window.py:291
 #, python-brace-format
-msgid "{peso} / {limite} ({porcentaje}%) — ⚠️ Excede la capacidad!"
-msgstr "{peso} / {limite} ({porcentaje}%) — ⚠️ Edukiera gainditua!"
+msgid "{peso} / {limite} ({porcentaje}%) — ⚠ Excede la capacidad!"
+msgstr "{peso} / {limite} ({porcentaje}%) — ⚠ Edukiera gaindituta!"
 
-#: src/window.py:295
+#: src/window.py:298
 #, python-brace-format
 msgid "{peso} / {limite} ({porcentaje}%) — Duración: {tiempo}"
 msgstr "{peso} / {limite} ({porcentaje}%) — Iraupena: {tiempo}"
 
-#: src/window.py:317 src/window.ui:106
+#: src/window.py:320 src/window.ui:107
 msgid "No hay pistas de audio"
 msgstr "Ez dago audio pistarik"
 
-#: src/window.py:318 src/window.ui:107
+#: src/window.py:321 src/window.ui:108
 msgid "Usa el botón '+' superior para agregar archivos"
 msgstr "Erabili goiko '+' botoia fitxategiak gehitzeko"
 
-#: src/window.py:420
+#: src/window.py:423
 msgid "16:9 Ajuste perfecto"
-msgstr "16:9 Doitze perfektua"
+msgstr "16:9 Doitze ezin hobea"
 
-#: src/window.py:431 src/window.py:442
+#: src/window.py:434 src/window.py:445
 msgid "Ajustado a la pantalla"
-msgstr "Pantsailara doituta"
+msgstr "Pantailara doituta"
 
-#: src/window.py:545
+#: src/window.py:548
 msgid "Seleccionar Portada para el DVD (Recomendado 1024×576)"
-msgstr "Aukeratu DVD Azala (Gomendatua 1024×576)"
+msgstr "Hautatu DVDaren azala (Gomendatua: 1024×576)"
 
-#: src/window.py:547 src/window.py:721
+#: src/window.py:550 src/window.py:738
 msgid "Seleccionar"
 msgstr "Hautatu"
 
-#: src/window.py:551
+#: src/window.py:554
 msgid "Imágenes (*.png, *.jpg, *.jpeg, *.webp)"
 msgstr "Irudiak (*.png, *.jpg, *.jpeg, *.webp)"
 
-#: src/window.py:572
+#: src/window.py:575
 msgid "Seleccionar archivos de audio"
 msgstr "Hautatu audio fitxategiak"
 
-#: src/window.py:575
+#: src/window.py:578
 msgid "Añadir"
 msgstr "Gehitu"
 
-#: src/window.py:579
+#: src/window.py:582
 msgid "Archivos de audio (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
 msgstr "Audio fitxategiak (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
 
-#: src/window.py:682 src/window.ui:270
+#: src/window.py:685 src/window.ui:271
 msgid "LPCM • 48 kHz / 16-bit"
 msgstr "LPCM • 48 kHz / 16-bit"
 
-#: src/window.py:685
+#: src/window.py:688
 msgid "AC3 • 448 kbps / Alta compatibilidad"
-msgstr "AC3 • 448 kbps / Bateragarria"
+msgstr "AC3 • 448 kbps / Bateragarritasun handia"
 
-#: src/window.py:696
+#: src/window.py:699
 msgid "4.7 GB / Capa simple"
-msgstr "4.7 GB / Geruza bakarra"
+msgstr "4.7 GB / geruza bakarra"
 
-#: src/window.py:698
+#: src/window.py:701
 msgid "8.5 GB / Doble capa"
-msgstr "8.5 GB / Geruza bikoitza"
+msgstr "8.5 GB / geruza bikoitza"
 
-#: src/window.py:705 src/window.ui:255
+#: src/window.py:708 src/window.ui:256
 msgid "PAL (25 fps / 720x576)"
 msgstr "PAL (25 fps / 720x576)"
 
-#: src/window.py:707
+#: src/window.py:710
 msgid "NTSC (29.97 fps / 720x480)"
 msgstr "NTSC (29.97 fps / 720x480)"
 
-#: src/window.py:714
+#: src/window.py:717
 msgid "Guardar Imagen ISO"
-msgstr "Gorde ISO Irudia"
+msgstr "Gorde ISO irudia"
 
-#: src/window.py:715
+#: src/window.py:718
 msgid "Guardar"
 msgstr "Gorde"
 
-#: src/window.py:720
+#: src/window.py:723
+msgid "Archivos de imagen ISO (*.iso)"
+msgstr "ISO irudi fitxategiak (*.iso)"
+
+#: src/window.py:737
 msgid "Seleccionar Carpeta de Salida"
 msgstr "Hautatu irteera karpeta"
 
-#: src/window.py:758
+#: src/window.py:775
 msgid "Generando DVD..."
 msgstr "DVDa sortzen..."
 
-#: src/window.py:775 src/window.py:794
+#: src/window.py:792 src/window.py:811
 msgid "Iniciando proceso..."
-msgstr "Prozesua hazten..."
+msgstr "Prozesua hasten..."
 
-#: src/window.py:784
+#: src/window.py:801
 msgid "Cancelar"
-msgstr "Ezeztatu"
+msgstr "Utzi"
 
-#: src/window.py:814
+#: src/window.py:831
 msgid "¿Cancelar proceso?"
-msgstr "Ezeztatu prozesua?"
+msgstr "Prozesua bertan behera utzi?"
 
-#: src/window.py:815
+#: src/window.py:832
 msgid ""
 "Se detendrá la creación del DVD y se eliminarán los archivos temporales "
 "generados."
 msgstr ""
-"DVDa sortzea geldituko da eta aldi baterako fitxategiak ezabatuko dira."
+"DVDaren sorrera geldituko da eta sortutako aldi baterako fitxategiak "
+"ezabatuko dira."
 
-#: src/window.py:817
+#: src/window.py:834
 msgid "Continuar"
 msgstr "Jarraitu"
 
-#: src/window.py:818
+#: src/window.py:835
 msgid "Sí, cancelar"
-msgstr "Bai, ezeztatu"
+msgstr "Bai, utzi"
 
-#: src/window.py:829
+#: src/window.py:846
 msgid "Cancelando y limpiando..."
-msgstr "Ezeztatzen eta garbitzen..."
+msgstr "Eztatzen eta garbitzen..."
 
-#: src/window.py:873 src/window.py:985 src/window.ui:25
+#: src/window.py:890 src/window.py:1008 src/window.ui:26
 msgid "Crear DVD"
 msgstr "Sortu DVDa"
 
-#: src/window.py:920
+#: src/window.py:943
 msgid "Procesando..."
 msgstr "Prozesatzen..."
 
-#: src/window.py:990 src/window.py:998
+#: src/window.py:1013 src/window.py:1021
 msgid "El DVD fue generado correctamente."
 msgstr "DVDa ondo sortu da."
 
-#: src/window.py:990
+#: src/window.py:1013
 msgid "Error:"
-msgstr "Error:"
+msgstr "Errorea:"
 
-#: src/window.py:996
+#: src/window.py:1019
 msgid "Proceso Completado"
-msgstr "Prozesua osatua"
+msgstr "Prozesua amaituta"
 
-#: src/window.py:996
+#: src/window.py:1019
 msgid "Error en la Generación"
 msgstr "Errorea sortzean"
 
-#: src/window.py:1000
+#: src/window.py:1023
 msgid "Ocurrió un error al procesar el DVD:"
-msgstr "Errorea gertatu da DVDa egitean:"
+msgstr "Errore bat gertatu da DVDa prozesatzean:"
 
-#: src/dvd_engine.py:47 src/dvd_engine.py:920
+#: src/dvd_engine.py:48 src/dvd_engine.py:918
 msgid "Creando disco DVD HiFi..."
-msgstr "HiFi DVDa sortzen..."
+msgstr "HiFi DVD diskoa sortzen..."
 
-#: src/dvd_engine.py:299
+#: src/dvd_engine.py:300
 #, python-brace-format
 msgid ""
 "El contenido ({horas}h {minutos}m) supera la capacidad máxima del {tipo}.\n"
 "Tamaño estimado: {est} | Límite disponible: {lim}.\n"
 "Sugerencia: Cambie el formato de audio a AC3 o cambie a DVD-9 de Doble Capa."
 msgstr ""
-"Edukiak ({horas}h {minutos}m) {tipo}-(r)en gehienezko edukiera gainditzen du.\n"
-"Aurreikusitako tamaina: {est} | Muga erabilgarria: {lim}.\n"
-"Iradokizuna: Aldatu audio-formatua AC3ra edo aldatu Geruza Bikoitzeko DVD-9ra."
+"Edukia ({horas}h {minutos}m) {tipo} motako gehieneko edukiera baino handiagoa da.\n"
+"Garaiera estimatua: {est} | Mugagabea: {lim}.\n"
+"Iradokizuna: Aldatu audio formatua AC3ra edo erabili geruza bikoitzeko DVD-9."
 
-#: src/dvd_engine.py:315 src/dvd_engine.py:332 src/dvd_engine.py:449
-#: src/dvd_engine.py:471 src/dvd_engine.py:555 src/dvd_engine.py:648
+#: src/dvd_engine.py:316 src/dvd_engine.py:333 src/dvd_engine.py:450
+#: src/dvd_engine.py:472 src/dvd_engine.py:658
 msgid "Proceso cancelado por el usuario."
-msgstr "Erabiltzaileak bertan behera utzita."
+msgstr "Erabiltzaileak prozesua bertan behera utzi du."
 
-#: src/dvd_engine.py:352
+#: src/dvd_engine.py:353
 #, python-brace-format
 msgid "Faltan herramientas necesarias en el sistema: {herramientas}"
-msgstr "Tresnak falta dira sisteman: {herramientas}"
+msgstr "Sisteman beharrezkoak diren tresnak falta dira: {herramientas}"
 
-#: src/dvd_engine.py:428 src/dvd_engine.py:636 src/dvd_engine.py:734
-#: src/dvd_engine.py:821
+#: src/dvd_engine.py:429 src/dvd_engine.py:648 src/dvd_engine.py:738
+#: src/dvd_engine.py:823
 msgid "No hay suficiente espacio libre en disco para completar la operación."
-msgstr "Ez dago nahikoa leku vagoneta eragiketa amaitzeko."
+msgstr "Ez dago nahiko leku libre diskoan eragiketa osatzeko."
 
-#: src/dvd_engine.py:432
+#: src/dvd_engine.py:433
 #, python-brace-format
 msgid "Fallo al optimizar la portada: {error}"
-msgstr "Hutsegitea azala optimizatzean: {error}"
+msgstr "Huts egin du azala optimizatzean: {error}"
 
-#: src/dvd_engine.py:563
-#, python-brace-format
-msgid "Codificando Pista {actual}/{total} ({formato})"
-msgstr "Pista kodetzen {actual}/{total} ({formato})"
+#: src/dvd_engine.py:571
+msgid "Codificando pistas de audio ({formato})"
+msgstr "Audio pistak kodetzen ({formato})"
 
-#: src/dvd_engine.py:641
-#, python-brace-format
+#: src/dvd_engine.py:653
 msgid ""
-"Fallo al codificar la pista {pista_num}:\n"
+"Fallo al codificar el álbum:\n"
 "{error}"
 msgstr ""
-"Hutsegitea {pista_num} pista kodetzen:\n"
+"Huts egin du albuma kodetzen:\n"
 "{error}"
 
-#: src/dvd_engine.py:652
+#: src/dvd_engine.py:661
 msgid "Escribiendo tabla de capítulos nativa..."
-msgstr "Kapituluen taula idazten..."
+msgstr "Kapituluen jatorrizko taula idazten..."
 
-#: src/dvd_engine.py:704
+#: src/dvd_engine.py:708
 msgid "No se encontró 'genisoimage' ni 'mkisofs' real en el sistema."
 msgstr "Ez da 'genisoimage' edo 'mkisofs' aurkitu sisteman."
 
-#: src/dvd_engine.py:740
+#: src/dvd_engine.py:744
 #, python-brace-format
 msgid ""
 "Fallo al compilar la ISO con {herramienta}.\n"
 "Detalle:\n"
 "{detalle}"
 msgstr ""
-"Hutsegitea ISOa sortzean ({herramienta}).\n"
-"Xehetasunak:\n"
+"Huts egin du ISOa {herramienta}-rekin biltzean.\n"
+"Xehetasuna:\n"
 "{detalle}"
 
-#: src/dvd_engine.py:758
+#: src/dvd_engine.py:762
 #, python-brace-format
 msgid "Portada no encontrada: {ruta}"
 msgstr "Ez da azala aurkitu: {ruta}"
 
-#: src/dvd_engine.py:762 src/dvd_engine.py:887
+#: src/dvd_engine.py:766 src/dvd_engine.py:885
 msgid "No se especificaron archivos de audio."
 msgstr "Ez da audio fitxategirik zehaztu."
 
-#: src/dvd_engine.py:779
+#: src/dvd_engine.py:783
 msgid "Optimizando imagen de portada..."
 msgstr "Azalaren irudia optimizatzen..."
 
-#: src/dvd_engine.py:799
+#: src/dvd_engine.py:802
 msgid "Compilando estructura VIDEO_TS con dvdauthor..."
-msgstr "VIDEO_TS egitura sortzen dvdauthor-ekin..."
+msgstr "VIDEO_TS egitura biltzen dvdauthor-ekin..."
 
-#: src/dvd_engine.py:826
+#: src/dvd_engine.py:828
 #, python-brace-format
 msgid ""
 "dvdauthor falló al construir la estructura:\n"
 "{detalle}"
 msgstr ""
-"dvdauthor-ek huts egin du egituran:\n"
+"dvdauthor-ek huts egin du egitura eraikitzean:\n"
 "{detalle}"
 
-#: src/dvd_engine.py:833
+#: src/dvd_engine.py:834
 msgid "Generando ISO... (puede tardar unos minutos)"
 msgstr "ISOa sortzen... (minutu batzuk har ditzake)"
 
-#: src/dvd_engine.py:852
+#: src/dvd_engine.py:851
 msgid "Guardando directorio VIDEO_TS..."
 msgstr "VIDEO_TS direktorioa gordetzen..."
 
-#: src/dvd_engine.py:865
+#: src/dvd_engine.py:863
 msgid "¡Proceso completado con éxito!"
-msgstr "Prozesua arrakastaz osatu da!"
+msgstr "Prozesua arrakastaz amaitu da!"
 
-#: src/window.ui:37
+#: src/window.ui:38
 msgid "Menú principal"
 msgstr "Menu nagusia"
 
-#: src/window.ui:72
-msgid "1. Archivos de Audio"
-msgstr "1. Audio Fitxategiak"
-
 #: src/window.ui:73
+msgid "1. Archivos de Audio"
+msgstr "1. Audio fitxategiak"
+
+#: src/window.ui:74
 msgid "Formatos soportados: FLAC, WAV, MP3, OGG, M4A"
-msgstr "Formatu onartuak: FLAC, WAV, MP3, OGG, M4A"
+msgstr "Onartutako formatuak: FLAC, WAV, MP3, OGG, M4A"
 
-#: src/window.ui:77
+#: src/window.ui:78
 msgid "Pistas a incluir"
-msgstr "Pistak"
-
-#: src/window.ui:130
-msgid "2. Imagen de Portada"
-msgstr "2. Azaleko irudia"
+msgstr "Gehituko diren pistak"
 
 #: src/window.ui:131
+msgid "2. Imagen de Portada"
+msgstr "2. Azalaren irudia"
+
+#: src/window.ui:132
 msgid "Recomendado 1024×576 px (16:9)"
-msgstr "Gomendatua 1024×576 px (16:9)"
+msgstr "Gomendatua: 1024×576 px (16:9)"
 
-#: src/window.ui:135
+#: src/window.ui:136
 msgid "Seleccionar carátula"
-msgstr "Aukeratu azala"
+msgstr "Hautatu azala"
 
-#: src/window.ui:139
+#: src/window.ui:140
 msgid "Buscar..."
-msgstr "Bilatu..."
-
-#: src/window.ui:180
-msgid "Sin portada seleccionada"
-msgstr "Azal gabe"
+msgstr "Arakatu..."
 
 #: src/window.ui:181
+msgid "Sin portada seleccionada"
+msgstr "Azalik hautatu gabe"
+
+#: src/window.ui:182
 msgid "Formatos: PNG, JPG, WEBP"
 msgstr "Formatuak: PNG, JPG, WEBP"
 
-#: src/window.ui:211
+#: src/window.ui:212
 msgid "Vista previa en TV (16:9)"
 msgstr "Telebistako aurrebista (16:9)"
 
-#: src/window.ui:227
+#: src/window.ui:228
 msgid "3. Ajustes de DVD y Audio"
 msgstr "3. DVD eta Audio ezarpenak"
 
-#: src/window.ui:254
+#: src/window.ui:255
 msgid "Norma de TV"
 msgstr "Telebista araua"
 
-#: src/window.ui:259
+#: src/window.ui:260
 msgid "PAL (Europa)"
 msgstr "PAL (Europa)"
 
-#: src/window.ui:260
+#: src/window.ui:261
 msgid "NTSC (América / Japón)"
 msgstr "NTSC (Amerika / Japonia)"
 
-#: src/window.ui:269
+#: src/window.ui:270
 msgid "Formato de Audio"
 msgstr "Audio formatua"
 
-#: src/window.ui:274
+#: src/window.ui:275
 msgid "PCM (Sin compresión)"
 msgstr "PCM (Konpresiorik gabe)"
 
-#: src/window.ui:275 src/preferences-dialog.ui:29
+#: src/window.ui:276 src/preferences-dialog.ui:29
 msgid "AC3 (Dolby Digital)"
 msgstr "AC3 (Dolby Digital)"
 
-#: src/window.ui:284
+#: src/window.ui:285
 msgid "Tipo de disco DVD"
-msgstr "DVD disko mota"
+msgstr "DVD diskotukeria"
 
-#: src/window.ui:288
+#: src/window.ui:289
 msgid "DVD-5"
 msgstr "DVD-5"
 
-#: src/window.ui:289
+#: src/window.ui:290
 msgid "DVD-9"
 msgstr "DVD-9"
 
-#: src/window.ui:298
+#: src/window.ui:299
 msgid "Espacio en disco"
 msgstr "Lekua diskoan"
 
-#: src/window.ui:319
-msgid "Igualar volumen"
-msgstr "Berdindu bolumena"
-
 #: src/window.ui:320
-msgid "Evita cambios bruscos (EBU R128)"
-msgstr "Aldaketak saihestu (EBU R128)"
+msgid "Igualar volumen"
+msgstr "Bolumena berdindu"
 
-#: src/window.ui:332
+#: src/window.ui:321
+msgid "Evita cambios bruscos (EBU R128)"
+msgstr "Aldaketa zakarrak ekiditen ditu (EBU R128)"
+
+#: src/window.ui:333
 msgid "Formato de Salida"
 msgstr "Irteera formatua"
 
-#: src/window.ui:336
-msgid "Imagen ISO (.iso)"
-msgstr "ISO Irudia (.iso)"
-
 #: src/window.ui:337
+msgid "Imagen ISO (.iso)"
+msgstr "ISO irudia (.iso)"
+
+#: src/window.ui:338
 msgid "Carpeta DVD (VIDEO_TS)"
-msgstr "DVD Karpeta (VIDEO_TS)"
+msgstr "DVD karpeta (VIDEO_TS)"
 
-#: src/window.ui:346
+#: src/window.ui:347
 msgid "Ubicación de Destino"
-msgstr "Helburuko kokapena"
+msgstr "Helmugako kokapena"
 
-#: src/window.ui:350
+#: src/window.ui:351
 msgid "Examinar..."
 msgstr "Arakatu..."
 
-#: src/window.ui:381 src/preferences-dialog.ui:7
+#: src/window.ui:382 src/preferences-dialog.ui:7
 msgid "Preferencias"
-msgstr "Hobespenak"
+msgstr "Ezarpenak"
 
-#: src/window.ui:391
+#: src/window.ui:392
 msgid "Créditos"
 msgstr "Honi buruz"
 
@@ -474,11 +520,11 @@ msgstr "Gehitu audio pistak"
 
 #: src/shortcuts-dialog.ui:21
 msgid "Seleccionar portada"
-msgstr "Aukeratu azala"
+msgstr "Hautatu azala"
 
 #: src/shortcuts-dialog.ui:27
 msgid "Seleccionar destino"
-msgstr "Aukeratu helburua"
+msgstr "Hautatu helmuga"
 
 #: src/shortcuts-dialog.ui:33
 msgid "Crear DVD / ISO"
@@ -490,7 +536,7 @@ msgstr "Aplikazioa"
 
 #: src/shortcuts-dialog.ui:45
 msgid "Ver Atajos de teclado"
-msgstr "Ikus lasterbideak"
+msgstr "Ikus laster-bideak"
 
 #: src/shortcuts-dialog.ui:51
 msgid "Cerrar aplicación"
@@ -502,15 +548,15 @@ msgstr "Audio kalitatea"
 
 #: src/preferences-dialog.ui:20
 msgid "Formato predeterminado para nuevos proyectos"
-msgstr "Proiektu berrientzako formatu lehenetsia"
+msgstr "Proiektu berrientzako lehenetsitako formatua"
 
 #: src/preferences-dialog.ui:24
 msgid "Formato predeterminado"
-msgstr "Formatu lehenetsia"
+msgstr "Formatua lehenetsia"
 
 #: src/preferences-dialog.ui:28
 msgid "PCM / LPCM (Sin compresión)"
-msgstr "PCM / LPCM (Konpresiorik g.)"
+msgstr "PCM / LPCM (Konpresiorik gabe)"
 
 #: src/preferences-dialog.ui:41
 msgid "Sistema"
@@ -518,19 +564,31 @@ msgstr "Sistema"
 
 #: src/preferences-dialog.ui:46
 msgid "Requiere reiniciar la aplicación para aplicarse por completo"
-msgstr "Aplikazioa berrabiarazi behar da aldaketak ezartzeko"
+msgstr "Aplikazioa berrabiaraztea eskatzen du aldaketak ezartzeko"
 
 #: src/preferences-dialog.ui:61
 msgid "Abre por defecto la última carpeta utilizada al guardar"
-msgstr "Gordetzean erabilitako azken karpeta irekitzen du"
+msgstr "Gordetzean erabilitako azken karpeta irekitzen du lehenetsi gisa"
 
 #: src/preferences-dialog.ui:68
 msgid "Acelera la conversión usando todos los núcleos del procesador"
-msgstr "Prozesadorearen nukleo guztiak erabiltzen ditu"
+msgstr "Bihurketa bizkortzen du prozesadorearen nukleo guztiak erabiliz"
 
 #: src/preferences-dialog.ui:75
 msgid "Envía un aviso de escritorio cuando finalice la generación"
-msgstr "Mahaigaineko ohar bat bidaltzen du amaitzean"
+msgstr "Mahai-gaineko ohar bat bidaltzen du sortzea amaitzean"
 
-#~ msgid "Imagen ISO (*.iso)"
-#~ msgstr "ISO Irudia (*.iso)"
+#~ msgid "GTK;"
+#~ msgstr "GTK;"
+
+#~ msgid "Keep the summary shorter, between 10 and 35 characters"
+#~ msgstr "Sortu kalitate handiko audio DVDak"
+
+#~ msgid "No description"
+#~ msgstr "Sortu audio DVDak erraztasunez."
+
+#~ msgid "Developer name"
+#~ msgstr "Marco P. Cabrera"
+
+#~ msgid "A caption"
+#~ msgstr "Aplikazioaren interfaze nagusia"
