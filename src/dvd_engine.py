@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 DVD Engine - Motor de autoría de DVD de Audio HiFi.
-Crea un VOB independiente por cada pista dentro de un PGC único para navegación
-nativa de capítulos y compila la estructura a ISO con genisoimage/mkisofs.
+Crea un flujo de datos continuo (Gapless) multiplexado en un único VOB
+con puntos de capítulo precisos para navegación nativa sin silencios entre pistas,
+y compila la estructura a ISO con genisoimage/mkisofs.
 """
 
 import gettext
@@ -152,7 +153,7 @@ class InhibitManager:
 
 
 class DVDEngine:
-    """Motor de conversión de Audio HiFi a DVD con navegación por capítulos nativa."""
+    """Motor de conversión de Audio HiFi a DVD con navegación continua (Gapless) por capítulos."""
 
     def __init__(
         self,
@@ -489,8 +490,8 @@ class DVDEngine:
                         progreso_pista * escala_pista
                     )
                     progress_callback(
-                        f"{texto_pista} ({int(progreso_pista * 100)}%)",
                         progreso_global,
+                        texto_pista
                     )
 
         rc = self.current_process.poll()
@@ -500,6 +501,13 @@ class DVDEngine:
             args=cmd, returncode=rc, stdout="", stderr=stderr_text
         )
 
+    def _formatear_tiempo_capitulo(self, segundos):
+        """Convierte segundos a formato HH:MM:SS.mmm para dvdauthor."""
+        h = int(segundos // 3600)
+        m = int((segundos % 3600) // 60)
+        s = segundos % 60
+        return f"{h:02d}:{m:02d}:{s:06.3f}"
+
     def _generar_xml_dvdauthor(
         self,
         audio_files,
@@ -508,7 +516,7 @@ class DVDEngine:
         xml_path,
         progress_callback=None,
     ):
-        """Codifica cada archivo de audio por separado a VOB con monitoreo continuo."""
+        """Concatena el audio completo en un único VOB (Gapless) y genera la tabla de capítulos."""
         w, h = self._obtener_dimensiones_imagen(cover_path)
         res_fmt = self.resolution.replace("x", ":")
 
@@ -537,120 +545,124 @@ class DVDEngine:
                 "adelay=500|500,aformat=sample_fmts=s16:sample_rates=48000"
             )
 
-        vob_files = []
-        total_pistas = len(audio_files)
-
         if self.audio_format == "ac3":
             codec_args = ["-c:a", "ac3", "-b:a", "448k"]
-            texto_fmt = "AC3"
+            texto_fmt = "AC3 Gapless"
         else:
             codec_args = ["-c:a", "pcm_s16be"]
-            texto_fmt = "LPCM"
+            texto_fmt = "LPCM Gapless"
 
-        escala_por_pista = 0.78 / total_pistas if total_pistas > 0 else 0.78
+        # 1. Crear playlist para concat demuxer de ffmpeg y calcular timestamps de capítulos
+        concat_list_path = os.path.join(temp_dir, "playlist.txt")
+        capitulos_timestamps = []
+        duracion_acumulada = 0.0
 
-        for idx, audio in enumerate(audio_files):
-            if self.is_cancelled:
-                raise ProcessCancelledError(
-                    _("Proceso cancelado por el usuario.")
+        with open(concat_list_path, "w", encoding="utf-8") as f:
+            for audio in audio_files:
+                clean_audio = audio.replace("'", "'\\''")
+                f.write(f"file '{clean_audio}'\n")
+
+                capitulos_timestamps.append(
+                    self._formatear_tiempo_capitulo(duracion_acumulada)
                 )
+                duracion_acumulada += self._obtener_duracion_audio(audio)
 
-            pista_num = idx + 1
-            vob_output = os.path.join(temp_dir, f"track_{pista_num:03d}.mpg")
-            duracion_pista = self._obtener_duracion_audio(audio)
-            offset_base = 0.02 + (idx * escala_por_pista)
-            texto_pista = _(
-                "Codificando Pista {actual}/{total} ({formato})"
-            ).format(actual=pista_num, total=total_pistas, formato=texto_fmt)
+        vob_output = os.path.join(temp_dir, "continuous_album.mpg")
+        texto_progreso = _("Codificando pistas de audio ({formato})").format(formato=texto_fmt)
 
-            cmd = (
-                [
-                    "ffmpeg",
-                    "-y",
-                    "-nostdin",
-                    "-hide_banner",
-                    "-loop",
-                    "1",
-                    "-i",
-                    cover_path,
-                    "-i",
-                    audio,
-                    "-vf",
-                    filter_v,
-                    "-af",
-                    filter_a,
-                    "-map",
-                    "0:v:0",
-                    "-map",
-                    "1:a:0",
-                    "-c:v",
-                    "mpeg2video",
-                    "-b:v",
-                    "2000k",
-                    "-maxrate:v",
-                    "2000k",
-                    "-bufsize:v",
-                    "1835k",
-                    "-g",
-                    self.gop_size,
-                    "-bf",
-                    "0",
-                    "-aspect",
-                    "16:9",
-                ]
-                + codec_args
-                + [
-                    "-ar",
-                    "48000",
-                    "-ac",
-                    "2",
-                    "-map_metadata",
-                    "-1",
-                    "-f",
-                    "dvd",
-                    "-shortest",
-                    vob_output,
-                ]
-            )
+        # 2. Codificar vídeo estático + audio concatenado continuo en un solo paso
+        cmd = (
+            [
+                "ffmpeg",
+                "-y",
+                "-nostdin",
+                "-hide_banner",
+                "-loop",
+                "1",
+                "-i",
+                cover_path,
+                "-f",
+                "concat",
+                "-safe",
+                "0",
+                "-i",
+                concat_list_path,
+                "-vf",
+                filter_v,
+                "-af",
+                filter_a,
+                "-map",
+                "0:v:0",
+                "-map",
+                "1:a:0",
+                "-c:v",
+                "mpeg2video",
+                "-b:v",
+                "2000k",
+                "-maxrate:v",
+                "2000k",
+                "-bufsize:v",
+                "1835k",
+                "-g",
+                self.gop_size,
+                "-bf",
+                "0",
+                "-aspect",
+                "16:9",
+            ]
+            + codec_args
+            + [
+                "-ar",
+                "48000",
+                "-ac",
+                "2",
+                "-map_metadata",
+                "-1",
+                "-f",
+                "dvd",
+                "-shortest",
+                vob_output,
+            ]
+        )
 
-            res = self._ejecutar_ffmpeg_con_progreso(
-                cmd=cmd,
-                duracion_total=duracion_pista,
-                offset_base=offset_base,
-                escala_pista=escala_por_pista,
-                texto_pista=texto_pista,
-                progress_callback=progress_callback,
-            )
+        res = self._ejecutar_ffmpeg_con_progreso(
+            cmd=cmd,
+            duracion_total=duracion_acumulada,
+            offset_base=0.02,
+            escala_pista=0.78,
+            texto_pista=texto_progreso,
+            progress_callback=progress_callback,
+        )
 
-            with open(self.log_file, "a", encoding="utf-8") as log:
-                log.write(f"\n--- CODIFICANDO PISTA {pista_num} ---\n")
-                log.write(res.stderr)
+        with open(self.log_file, "a", encoding="utf-8") as log:
+            log.write("\n--- CODIFICANDO ÁLBUM CONTINUO (GAPLESS) ---\n")
+            log.write(res.stderr)
 
-            if res.returncode != 0:
-                if (
-                    "No space left on device" in res.stderr
-                    or "ENOSPC" in res.stderr
-                ):
-                    raise RuntimeError(
-                        _(
-                            "No hay suficiente espacio libre en disco para completar la operación."
-                        )
-                    )
+        if res.returncode != 0:
+            if (
+                "No space left on device" in res.stderr
+                or "ENOSPC" in res.stderr
+            ):
                 raise RuntimeError(
                     _(
-                        "Fallo al codificar la pista {pista_num}:\n{error}"
-                    ).format(pista_num=pista_num, error=res.stderr[-500:])
+                        "No hay suficiente espacio libre en disco para completar la operación."
+                    )
                 )
-
-            vob_files.append(vob_output)
+            raise RuntimeError(
+                _(
+                    "Fallo al codificar el álbum continuo:\n{error}"
+                ).format(error=res.stderr[-500:])
+            )
 
         if self.is_cancelled:
             raise ProcessCancelledError(_("Proceso cancelado por el usuario."))
 
         if progress_callback:
-            progress_callback(
-                _("Escribiendo tabla de capítulos nativa..."), 0.82
-            )
+            progress_callback(0.82, _("Escribiendo tabla de capítulos nativa..."))
+
+        # 3. Formatear la cadena de capítulos para dvdauthor
+        chapters_str = ",".join(capitulos_timestamps)
+        clean_vob_path = vob_output.replace("\\", "/")
 
         lines = [
             "<dvdauthor>",
@@ -658,21 +670,13 @@ class DVDEngine:
             "  <titleset>",
             "    <titles>",
             "      <pgc>",
-        ]
-
-        for vob in vob_files:
-            clean_vob_path = vob.replace("\\", "/")
-            lines.append(
-                f'        <vob file="{clean_vob_path}" chapters="00:00:00.000" />'
-            )
-
-        lines.extend([
+            f'        <vob file="{clean_vob_path}" chapters="{chapters_str}" />',
             "        <post>jump title 1 chapter 1;</post>",
             "      </pgc>",
             "    </titles>",
             "  </titleset>",
             "</dvdauthor>",
-        ])
+        ]
 
         with open(xml_path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines))
@@ -776,7 +780,7 @@ class DVDEngine:
 
         try:
             if progress_callback:
-                progress_callback(_("Optimizando imagen de portada..."), 0.01)
+                progress_callback(0.01, _("Optimizando imagen de portada..."))
             opt_cover_path = self._optimizar_portada(cover_path, temp_dir)
 
             xml_path = os.path.join(temp_dir, "dvdauthor.xml")
@@ -795,9 +799,7 @@ class DVDEngine:
             os.makedirs(dvd_root_dir, exist_ok=True)
 
             if progress_callback:
-                progress_callback(
-                    _("Compilando estructura VIDEO_TS con dvdauthor..."), 0.85
-                )
+                progress_callback(0.85, _("Compilando estructura VIDEO_TS con dvdauthor..."))
 
             env = os.environ.copy()
             env["VIDEO_FORMAT"] = self.tv_system.upper()
@@ -829,9 +831,7 @@ class DVDEngine:
 
             if iso_name:
                 if progress_callback:
-                    progress_callback(
-                        _("Generando ISO... (puede tardar unos minutos)"), 0.90
-                    )
+                    progress_callback(0.90, _("Generando ISO... (puede tardar unos minutos)"))
 
                 iso_path = (
                     iso_name
@@ -848,9 +848,7 @@ class DVDEngine:
                     shutil.rmtree(final_target, ignore_errors=True)
             else:
                 if progress_callback:
-                    progress_callback(
-                        _("Guardando directorio VIDEO_TS..."), 0.95
-                    )
+                    progress_callback(0.95, _("Guardando directorio VIDEO_TS..."))
 
                 final_target = os.path.join(target_dir, "DVD_FINAL")
                 if os.path.exists(final_target):
@@ -862,7 +860,7 @@ class DVDEngine:
                 )
 
             if progress_callback:
-                progress_callback(_("¡Proceso completado con éxito!"), 1.0)
+                progress_callback(1.0, _("¡Proceso completado con éxito!"))
 
             return True
 

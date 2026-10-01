@@ -717,7 +717,21 @@ class HiFiDvdMakerWindow(Adw.ApplicationWindow):
             dialog.set_title(_("Guardar Imagen ISO"))
             dialog.set_accept_label(_("Guardar"))
             dialog.set_initial_name("dvd_audio.iso")
-            # ... resto del filtro iso ...
+
+            # --- CONFIGURACIÓN DEL FILTRO ISO ---
+            filter_iso = Gtk.FileFilter()
+            filter_iso.set_name(_("Archivos de imagen ISO (*.iso)"))
+            filter_iso.add_pattern("*.iso")
+            filter_iso.add_mime_type("application/x-cd-image")
+            filter_iso.add_mime_type("application/x-iso9660-image")
+
+            filters = Gio.ListStore.new(Gtk.FileFilter)
+            filters.append(filter_iso)
+
+            dialog.set_filters(filters)
+            dialog.set_default_filter(filter_iso)
+            # ------------------------------------
+
             dialog.save(self, None, self.on_output_file_selected)
         else:
             dialog.set_title(_("Seleccionar Carpeta de Salida"))
@@ -895,14 +909,20 @@ class HiFiDvdMakerWindow(Adw.ApplicationWindow):
 
         return True
 
-    def _actualizar_progreso_modal(self, mensaje, porcentaje):
+    def _actualizar_progreso_modal(self, porcentaje, mensaje=""):
         # Ignorar actualizaciones si el proceso fue cancelado
         if getattr(self, "_cancelando", False):
             return False
 
         if hasattr(self, "barra_progreso_modal") and self.progreso_win:
-            self._progreso_objetivo = float(porcentaje)
-            self._mensaje_actual = mensaje
+            try:
+                self._progreso_objetivo = float(porcentaje)
+            except (ValueError, TypeError):
+                pass
+
+            if mensaje:
+                self._mensaje_actual = str(mensaje)
+
         return False
 
     def _cerrar_ventana_progreso(self):
@@ -989,7 +1009,7 @@ class HiFiDvdMakerWindow(Adw.ApplicationWindow):
 
         if self.settings.get_boolean("notify-on-complete") and not self.is_active():
             try:
-                notif = Gio.Notification.new("HiFiDvdMaker")
+                notif = Gio.Notification.new("HiFi DVD Maker")
                 msg = _("El DVD fue generado correctamente.") if exito else f"{_('Error:')} {error_msg}"
                 notif.set_body(msg)
                 self.get_application().send_notification("dvd-created", notif)

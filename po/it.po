@@ -1,4 +1,4 @@
-# Italian translation for HiFi Dvd Maker.
+# Italian translation for HiFi DVD Maker.
 # Copyright (C) 2026 Marco P. Cabrera
 # Translation by Gemini AI.
 #
@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hifidvdmaker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-27 10:46+0200\n"
-"PO-Revision-Date: 2026-09-26 20:38+0200\n"
+"POT-Creation-Date: 2026-09-30 23:30+0200\n"
+"PO-Revision-Date: 2026-10-01 05:48+0200\n"
 "Last-Translator: Gemini AI\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -17,29 +17,72 @@ msgstr ""
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:2
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:7
-msgid "HiFiDvdMaker"
-msgstr "HiFiDvdMaker"
+msgid "HiFi DVD Maker"
+msgstr "HiFi DVD Maker"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:8
-msgid "GTK;"
-msgstr "GTK;"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:9
+msgid "Audio;DVD;Grabador;Grabadora;GTK;"
+msgstr "Audio;DVD;Masterizzatore;GTK;"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:8
-msgid "Keep the summary shorter, between 10 and 35 characters"
-msgstr "Crea DVD Audio Hi-Fi"
+msgid "Crea DVDs de audio de alta fidelidad a partir de tu colección de música"
+msgstr "Crea DVD audio ad alta fedeltà dalla tua collezione musicale"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:10
-msgid "No description"
-msgstr "Nessuna descrizione"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:11
+msgid ""
+"HiFi DVD Maker es una aplicación moderna basada en GTK4 / Libadwaita diseñada para Linux "
+"que permite autorizar y crear fácilmente DVDs de audio de alta fidelidad con portadas personalizadas "
+"para tu compilación musical, listos para grabar en formato físico o reproducir directamente."
+msgstr ""
+"HiFi DVD Maker è un'applicazione moderna in GTK4 / Libadwaita per Linux "
+"che consente di creare facilmente DVD audio ad alta fedeltà con copertine personalizzate "
+"per la tua musica, pronti per essere masterizzati o riprodotti."
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:14
-msgid "Developer name"
+msgid "Las características principales incluyen:"
+msgstr "Le caratteristiche principali includono:"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:18
+msgid ""
+"Soporte de audio de alta fidelidad: Autoría de DVDs de audio sin compresión con calidad de CD (LPCM)."
+msgstr ""
+"Audio ad alta fedeltà: Creazione di DVD audio senza compressione con qualità CD (LPCM)."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:19
+msgid "Opción de compresión AC3: Soporte de codificación opcional Dolby Digital (AC3)."
+msgstr "Opzione di compressione AC3: Supporto codifica opzionale Dolby Digital (AC3)."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:20
+msgid ""
+"Múltiples formatos de salida: Exporta como ISO o estructura VIDEO_TS, lista para grabar en un disco DVD."
+msgstr ""
+"Formati di uscita multipli: Esporta come ISO o struttura VIDEO_TS, pronta per la masterizzazione."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:21
+msgid ""
+"Navegación de DVD estándar: Genera pistas y capítulos de DVD estándar para reproductores de DVD domésticos o de coche."
+msgstr ""
+"Navigazione DVD standard: Genera tracce e capitoli per lettori DVD da casa o per auto."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:22
+msgid "Portada de la compilación: Muestra portadas personalizadas en pantalla."
+msgstr "Copertina della raccolta: Mostra copertine personalizzate sullo schermo."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:23
+msgid "Soporte multilingüe: Disponible en 12 idiomas."
+msgstr "Supporto multilingue: Disponibile in 12 lingue."
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:28
+msgid "Marco P. Cabrera"
 msgstr "Marco P. Cabrera"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:52
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:56
-msgid "A caption"
-msgstr "A caption"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:50
+msgid "Interfaz principal de la aplicación"
+msgstr "Interfaccia principale dell'applicazione"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:58
+msgid "Lanzamiento público inicial."
+msgstr "Rilascio pubblico iniziale."
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:7
 #: src/preferences-dialog.ui:45
@@ -50,7 +93,8 @@ msgstr "Lingua dell'interfaccia"
 msgid ""
 "Código del idioma (ej. 'es', 'de', 'ja') o 'system' para usar el del sistema "
 "operativo."
-msgstr "Codice lingua (es. 'it', 'de') o 'system' per usare quello di sistema."
+msgstr ""
+"Codice lingua (es. 'it', 'es', 'de') o 'system' per usare quello del sistema."
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:13
 msgid "Formato de audio predeterminado"
@@ -59,7 +103,7 @@ msgstr "Formato audio predefinito"
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:18
 #: src/preferences-dialog.ui:60
 msgid "Recordar última ubicación"
-msgstr "Ricorda posizione"
+msgstr "Ricorda l'ultima posizione"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:23
 #: src/preferences-dialog.ui:67
@@ -69,396 +113,400 @@ msgstr "Elaborazione multithread"
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:28
 #: src/preferences-dialog.ui:74
 msgid "Notificar al completar"
-msgstr "Notifica al termine"
+msgstr "Notifica al completamento"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:33
 msgid "Última carpeta de origen o destino"
-msgstr "Ultima cartella usata"
+msgstr "Ultima cartella di origine o destinazione"
 
-#: src/window.py:174 src/window.ui:385 src/shortcuts-dialog.ui:4
+#: src/window.py:177 src/window.ui:386 src/shortcuts-dialog.ui:4
 #: src/shortcuts-dialog.ui:9
 msgid "Atajos de teclado"
-msgstr "Scorciatoie"
+msgstr "Scorciatoie da tastiera"
 
-#: src/window.py:182 src/window.ui:136 src/window.ui:347
+#: src/window.py:185 src/window.ui:137 src/window.ui:348
 msgid "No seleccionada"
 msgstr "Non selezionato"
 
-#: src/window.py:288
+#: src/window.py:291
 #, python-brace-format
-msgid "{peso} / {limite} ({porcentaje}%) — ⚠️ Excede la capacidad!"
-msgstr "{peso} / {limite} ({porcentaje}%) — ⚠️ Troppo grande!"
+msgid "{peso} / {limite} ({porcentaje}%) — ⚠ Excede la capacidad!"
+msgstr "{peso} / {limite} ({porcentaje}%) — ⚠ Capienza superata!"
 
-#: src/window.py:295
+#: src/window.py:298
 #, python-brace-format
 msgid "{peso} / {limite} ({porcentaje}%) — Duración: {tiempo}"
 msgstr "{peso} / {limite} ({porcentaje}%) — Durata: {tiempo}"
 
-#: src/window.py:317 src/window.ui:106
+#: src/window.py:320 src/window.ui:107
 msgid "No hay pistas de audio"
-msgstr "Nessun brano audio"
+msgstr "Nessuna traccia audio"
 
-#: src/window.py:318 src/window.ui:107
+#: src/window.py:321 src/window.ui:108
 msgid "Usa el botón '+' superior para agregar archivos"
-msgstr "Usa '+' in alto per aggiungere file"
+msgstr "Usa il pulsante '+' in alto per aggiungere file"
 
-#: src/window.py:420
+#: src/window.py:423
 msgid "16:9 Ajuste perfecto"
-msgstr "16:9 Adattato"
+msgstr "16:9 Adattamento perfetto"
 
-#: src/window.py:431 src/window.py:442
+#: src/window.py:434 src/window.py:445
 msgid "Ajustado a la pantalla"
 msgstr "Adattato allo schermo"
 
-#: src/window.py:545
+#: src/window.py:548
 msgid "Seleccionar Portada para el DVD (Recomendado 1024×576)"
-msgstr "Copertina DVD (Consigliato 1024×576)"
+msgstr "Seleziona copertina per il DVD (Consigliato 1024×576)"
 
-#: src/window.py:547 src/window.py:721
+#: src/window.py:550 src/window.py:738
 msgid "Seleccionar"
-msgstr "Scegli"
+msgstr "Seleziona"
 
-#: src/window.py:551
+#: src/window.py:554
 msgid "Imágenes (*.png, *.jpg, *.jpeg, *.webp)"
 msgstr "Immagini (*.png, *.jpg, *.jpeg, *.webp)"
 
-#: src/window.py:572
+#: src/window.py:575
 msgid "Seleccionar archivos de audio"
 msgstr "Seleziona file audio"
 
-#: src/window.py:575
+#: src/window.py:578
 msgid "Añadir"
 msgstr "Aggiungi"
 
-#: src/window.py:579
+#: src/window.py:582
 msgid "Archivos de audio (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
 msgstr "File audio (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
 
-#: src/window.py:682 src/window.ui:270
+#: src/window.py:685 src/window.ui:271
 msgid "LPCM • 48 kHz / 16-bit"
 msgstr "LPCM • 48 kHz / 16-bit"
 
-#: src/window.py:685
+#: src/window.py:688
 msgid "AC3 • 448 kbps / Alta compatibilidad"
-msgstr "AC3 • 448 kbps / Compatibile"
+msgstr "AC3 • 448 kbps / Alta compatibilità"
 
-#: src/window.py:696
+#: src/window.py:699
 msgid "4.7 GB / Capa simple"
 msgstr "4.7 GB / Singolo strato"
 
-#: src/window.py:698
+#: src/window.py:701
 msgid "8.5 GB / Doble capa"
 msgstr "8.5 GB / Doppio strato"
 
-#: src/window.py:705 src/window.ui:255
+#: src/window.py:708 src/window.ui:256
 msgid "PAL (25 fps / 720x576)"
 msgstr "PAL (25 fps / 720x576)"
 
-#: src/window.py:707
+#: src/window.py:710
 msgid "NTSC (29.97 fps / 720x480)"
 msgstr "NTSC (29.97 fps / 720x480)"
 
-#: src/window.py:714
+#: src/window.py:717
 msgid "Guardar Imagen ISO"
 msgstr "Salva immagine ISO"
 
-#: src/window.py:715
+#: src/window.py:718
 msgid "Guardar"
 msgstr "Salva"
 
-#: src/window.py:720
+#: src/window.py:723
+msgid "Archivos de imagen ISO (*.iso)"
+msgstr "File immagine ISO (*.iso)"
+
+#: src/window.py:737
 msgid "Seleccionar Carpeta de Salida"
-msgstr "Seleziona cartella di uscita"
+msgstr "Seleziona cartella di destinazione"
 
-#: src/window.py:758
+#: src/window.py:775
 msgid "Generando DVD..."
-msgstr "Creazione DVD..."
+msgstr "Generazione DVD..."
 
-#: src/window.py:775 src/window.py:794
+#: src/window.py:792 src/window.py:811
 msgid "Iniciando proceso..."
-msgstr "Avvio in corso..."
+msgstr "Avvio del processo..."
 
-#: src/window.py:784
+#: src/window.py:801
 msgid "Cancelar"
 msgstr "Annulla"
 
-#: src/window.py:814
+#: src/window.py:831
 msgid "¿Cancelar proceso?"
-msgstr "Annullare?"
+msgstr "Annullare il processo?"
 
-#: src/window.py:815
+#: src/window.py:832
 msgid ""
 "Se detendrá la creación del DVD y se eliminarán los archivos temporales "
 "generados."
-msgstr "La creazione del DVD verrà interrotta ed i file temporanei eliminati."
+msgstr ""
+"La creazione del DVD verrà interrotta e i file temporanei "
+"verranno eliminati."
 
-#: src/window.py:817
+#: src/window.py:834
 msgid "Continuar"
 msgstr "Continua"
 
-#: src/window.py:818
+#: src/window.py:835
 msgid "Sí, cancelar"
 msgstr "Sì, annulla"
 
-#: src/window.py:829
+#: src/window.py:846
 msgid "Cancelando y limpiando..."
-msgstr "Annullamento..."
+msgstr "Annullamento e pulizia..."
 
-#: src/window.py:873 src/window.py:985 src/window.ui:25
+#: src/window.py:890 src/window.py:1008 src/window.ui:26
 msgid "Crear DVD"
 msgstr "Crea DVD"
 
-#: src/window.py:920
+#: src/window.py:943
 msgid "Procesando..."
 msgstr "Elaborazione..."
 
-#: src/window.py:990 src/window.py:998
+#: src/window.py:1013 src/window.py:1021
 msgid "El DVD fue generado correctamente."
-msgstr "DVD creato con successo."
+msgstr "Il DVD è stato generato correttamente."
 
-#: src/window.py:990
+#: src/window.py:1013
 msgid "Error:"
-msgstr "Error:"
+msgstr "Errore:"
 
-#: src/window.py:996
+#: src/window.py:1019
 msgid "Proceso Completado"
-msgstr "Completato"
+msgstr "Processo completato"
 
-#: src/window.py:996
+#: src/window.py:1019
 msgid "Error en la Generación"
-msgstr "Errore di creazione"
+msgstr "Errore di generazione"
 
-#: src/window.py:1000
+#: src/window.py:1023
 msgid "Ocurrió un error al procesar el DVD:"
-msgstr "Errore durante la creazione del DVD:"
+msgstr "Errore durante l'elaborazione del DVD:"
 
-#: src/dvd_engine.py:47 src/dvd_engine.py:920
+#: src/dvd_engine.py:48 src/dvd_engine.py:918
 msgid "Creando disco DVD HiFi..."
-msgstr "Creazione DVD HiFi..."
+msgstr "Creazione disco DVD HiFi..."
 
-#: src/dvd_engine.py:299
+#: src/dvd_engine.py:300
 #, python-brace-format
 msgid ""
 "El contenido ({horas}h {minutos}m) supera la capacidad máxima del {tipo}.\n"
 "Tamaño estimado: {est} | Límite disponible: {lim}.\n"
 "Sugerencia: Cambie el formato de audio a AC3 o cambie a DVD-9 de Doble Capa."
 msgstr ""
-"Il contenuto ({horas}h {minutos}m) supera la capacità massima del {tipo}.\n"
+"Il contenuto ({horas}h {minutos}m) supera la capacità del {tipo}.\n"
 "Dimensione stimata: {est} | Limite disponibile: {lim}.\n"
-"Suggerimento: Cambiare il formato audio in AC3 o passare a un DVD-9 a Doppio Strato."
+"Suggerimento: Cambia il formato audio in AC3 o usa un DVD-9 a doppio strato."
 
-#: src/dvd_engine.py:315 src/dvd_engine.py:332 src/dvd_engine.py:449
-#: src/dvd_engine.py:471 src/dvd_engine.py:555 src/dvd_engine.py:648
+#: src/dvd_engine.py:316 src/dvd_engine.py:333 src/dvd_engine.py:450
+#: src/dvd_engine.py:472 src/dvd_engine.py:658
 msgid "Proceso cancelado por el usuario."
-msgstr "Annullato dall'utente."
+msgstr "Processo annullato dall'utente."
 
-#: src/dvd_engine.py:352
+#: src/dvd_engine.py:353
 #, python-brace-format
 msgid "Faltan herramientas necesarias en el sistema: {herramientas}"
-msgstr "Strumenti mancanti nel sistema: {herramientas}"
+msgstr "Strumenti necessari mancanti nel sistema: {herramientas}"
 
-#: src/dvd_engine.py:428 src/dvd_engine.py:636 src/dvd_engine.py:734
-#: src/dvd_engine.py:821
+#: src/dvd_engine.py:429 src/dvd_engine.py:648 src/dvd_engine.py:738
+#: src/dvd_engine.py:823
 msgid "No hay suficiente espacio libre en disco para completar la operación."
 msgstr "Spazio su disco insufficiente per completare l'operazione."
 
-#: src/dvd_engine.py:432
+#: src/dvd_engine.py:433
 #, python-brace-format
 msgid "Fallo al optimizar la portada: {error}"
-msgstr "Errore copertina: {error}"
+msgstr "Impossibile ottimizzare la copertina: {error}"
 
-#: src/dvd_engine.py:563
-#, python-brace-format
-msgid "Codificando Pista {actual}/{total} ({formato})"
-msgstr "Codifica brano {actual}/{total} ({formato})"
+#: src/dvd_engine.py:571
+msgid "Codificando pistas de audio ({formato})"
+msgstr "Codifica tracce audio ({formato})"
 
-#: src/dvd_engine.py:641
-#, python-brace-format
+#: src/dvd_engine.py:653
 msgid ""
-"Fallo al codificar la pista {pista_num}:\n"
+"Fallo al codificar el álbum:\n"
 "{error}"
 msgstr ""
-"Errore codifica brano {pista_num}:\n"
+"Errore nella codifica dell'album:\n"
 "{error}"
 
-#: src/dvd_engine.py:652
+#: src/dvd_engine.py:661
 msgid "Escribiendo tabla de capítulos nativa..."
-msgstr "Scrittura capitoli..."
+msgstr "Scrittura tabella dei capitoli nativa..."
 
-#: src/dvd_engine.py:704
+#: src/dvd_engine.py:708
 msgid "No se encontró 'genisoimage' ni 'mkisofs' real en el sistema."
-msgstr "'genisoimage' o 'mkisofs' non trovato."
+msgstr "Né 'genisoimage' né 'mkisofs' trovati nel sistema."
 
-#: src/dvd_engine.py:740
+#: src/dvd_engine.py:744
 #, python-brace-format
 msgid ""
 "Fallo al compilar la ISO con {herramienta}.\n"
 "Detalle:\n"
 "{detalle}"
 msgstr ""
-"Errore ISO con {herramienta}.\n"
+"Impossibile compilare l'ISO con {herramienta}.\n"
 "Dettaglio:\n"
 "{detalle}"
 
-#: src/dvd_engine.py:758
+#: src/dvd_engine.py:762
 #, python-brace-format
 msgid "Portada no encontrada: {ruta}"
 msgstr "Copertina non trovata: {ruta}"
 
-#: src/dvd_engine.py:762 src/dvd_engine.py:887
+#: src/dvd_engine.py:766 src/dvd_engine.py:885
 msgid "No se especificaron archivos de audio."
 msgstr "Nessun file audio specificato."
 
-#: src/dvd_engine.py:779
+#: src/dvd_engine.py:783
 msgid "Optimizando imagen de portada..."
-msgstr "Ottimizzazione copertina..."
+msgstr "Ottimizzazione immagine di copertina..."
 
-#: src/dvd_engine.py:799
+#: src/dvd_engine.py:802
 msgid "Compilando estructura VIDEO_TS con dvdauthor..."
-msgstr "Creazione VIDEO_TS con dvdauthor..."
+msgstr "Compilazione struttura VIDEO_TS con dvdauthor..."
 
-#: src/dvd_engine.py:826
+#: src/dvd_engine.py:828
 #, python-brace-format
 msgid ""
 "dvdauthor falló al construir la estructura:\n"
 "{detalle}"
 msgstr ""
-"Errore di dvdauthor:\n"
+"dvdauthor non è riuscito a costruire la struttura:\n"
 "{detalle}"
 
-#: src/dvd_engine.py:833
+#: src/dvd_engine.py:834
 msgid "Generando ISO... (puede tardar unos minutos)"
-msgstr "Creazione ISO... (può richiedere tempo)"
+msgstr "Generazione ISO in corso... (potrebbe richiedere alcuni minuti)"
 
-#: src/dvd_engine.py:852
+#: src/dvd_engine.py:851
 msgid "Guardando directorio VIDEO_TS..."
-msgstr "Salvataggio VIDEO_TS..."
+msgstr "Salvataggio cartella VIDEO_TS..."
 
-#: src/dvd_engine.py:865
+#: src/dvd_engine.py:863
 msgid "¡Proceso completado con éxito!"
 msgstr "Processo completato con successo!"
 
-#: src/window.ui:37
+#: src/window.ui:38
 msgid "Menú principal"
 msgstr "Menu principale"
 
-#: src/window.ui:72
-msgid "1. Archivos de Audio"
-msgstr "1. File Audio"
-
 #: src/window.ui:73
+msgid "1. Archivos de Audio"
+msgstr "1. File audio"
+
+#: src/window.ui:74
 msgid "Formatos soportados: FLAC, WAV, MP3, OGG, M4A"
 msgstr "Formati supportati: FLAC, WAV, MP3, OGG, M4A"
 
-#: src/window.ui:77
+#: src/window.ui:78
 msgid "Pistas a incluir"
-msgstr "Brani"
-
-#: src/window.ui:130
-msgid "2. Imagen de Portada"
-msgstr "2. Copertina"
+msgstr "Tracce da includere"
 
 #: src/window.ui:131
+msgid "2. Imagen de Portada"
+msgstr "2. Immagine di copertina"
+
+#: src/window.ui:132
 msgid "Recomendado 1024×576 px (16:9)"
 msgstr "Consigliato 1024×576 px (16:9)"
 
-#: src/window.ui:135
+#: src/window.ui:136
 msgid "Seleccionar carátula"
-msgstr "Scegli copertina"
+msgstr "Seleziona copertina"
 
-#: src/window.ui:139
+#: src/window.ui:140
 msgid "Buscar..."
-msgstr "Cerca..."
-
-#: src/window.ui:180
-msgid "Sin portada seleccionada"
-msgstr "Nessuna copertina"
+msgstr "Sfoglia..."
 
 #: src/window.ui:181
+msgid "Sin portada seleccionada"
+msgstr "Nessuna copertina selezionata"
+
+#: src/window.ui:182
 msgid "Formatos: PNG, JPG, WEBP"
 msgstr "Formati: PNG, JPG, WEBP"
 
-#: src/window.ui:211
+#: src/window.ui:212
 msgid "Vista previa en TV (16:9)"
 msgstr "Anteprima TV (16:9)"
 
-#: src/window.ui:227
+#: src/window.ui:228
 msgid "3. Ajustes de DVD y Audio"
 msgstr "3. Impostazioni DVD e Audio"
 
-#: src/window.ui:254
+#: src/window.ui:255
 msgid "Norma de TV"
 msgstr "Standard TV"
 
-#: src/window.ui:259
+#: src/window.ui:260
 msgid "PAL (Europa)"
 msgstr "PAL (Europa)"
 
-#: src/window.ui:260
+#: src/window.ui:261
 msgid "NTSC (América / Japón)"
 msgstr "NTSC (America / Giappone)"
 
-#: src/window.ui:269
+#: src/window.ui:270
 msgid "Formato de Audio"
-msgstr "Formato Audio"
+msgstr "Formato audio"
 
-#: src/window.ui:274
+#: src/window.ui:275
 msgid "PCM (Sin compresión)"
-msgstr "PCM (Non compresso)"
+msgstr "PCM (Senza compressione)"
 
-#: src/window.ui:275 src/preferences-dialog.ui:29
+#: src/window.ui:276 src/preferences-dialog.ui:29
 msgid "AC3 (Dolby Digital)"
 msgstr "AC3 (Dolby Digital)"
 
-#: src/window.ui:284
+#: src/window.ui:285
 msgid "Tipo de disco DVD"
 msgstr "Tipo di disco DVD"
 
-#: src/window.ui:288
+#: src/window.ui:289
 msgid "DVD-5"
 msgstr "DVD-5"
 
-#: src/window.ui:289
+#: src/window.ui:290
 msgid "DVD-9"
 msgstr "DVD-9"
 
-#: src/window.ui:298
+#: src/window.ui:299
 msgid "Espacio en disco"
 msgstr "Spazio su disco"
 
-#: src/window.ui:319
-msgid "Igualar volumen"
-msgstr "Livella volume"
-
 #: src/window.ui:320
-msgid "Evita cambios bruscos (EBU R128)"
-msgstr "Normalizza (EBU R128)"
+msgid "Igualar volumen"
+msgstr "Livella il volume"
 
-#: src/window.ui:332
+#: src/window.ui:321
+msgid "Evita cambios bruscos (EBU R128)"
+msgstr "Evita sbalzi improvvisi (EBU R128)"
+
+#: src/window.ui:333
 msgid "Formato de Salida"
 msgstr "Formato di uscita"
 
-#: src/window.ui:336
-msgid "Imagen ISO (.iso)"
-msgstr "File ISO (.iso)"
-
 #: src/window.ui:337
+msgid "Imagen ISO (.iso)"
+msgstr "Immagine ISO (.iso)"
+
+#: src/window.ui:338
 msgid "Carpeta DVD (VIDEO_TS)"
 msgstr "Cartella DVD (VIDEO_TS)"
 
-#: src/window.ui:346
+#: src/window.ui:347
 msgid "Ubicación de Destino"
-msgstr "Destinazione"
+msgstr "Posizione di destinazione"
 
-#: src/window.ui:350
+#: src/window.ui:351
 msgid "Examinar..."
 msgstr "Sfoglia..."
 
-#: src/window.ui:381 src/preferences-dialog.ui:7
+#: src/window.ui:382 src/preferences-dialog.ui:7
 msgid "Preferencias"
 msgstr "Preferenze"
 
-#: src/window.ui:391
+#: src/window.ui:392
 msgid "Créditos"
 msgstr "Informazioni"
 
@@ -468,15 +516,15 @@ msgstr "Azioni principali"
 
 #: src/shortcuts-dialog.ui:15
 msgid "Añadir pistas de audio"
-msgstr "Aggiungi brani audio"
+msgstr "Aggiungi tracce audio"
 
 #: src/shortcuts-dialog.ui:21
 msgid "Seleccionar portada"
-msgstr "Scegli copertina"
+msgstr "Seleziona copertina"
 
 #: src/shortcuts-dialog.ui:27
 msgid "Seleccionar destino"
-msgstr "Scegli destinazione"
+msgstr "Seleziona destinazione"
 
 #: src/shortcuts-dialog.ui:33
 msgid "Crear DVD / ISO"
@@ -492,11 +540,11 @@ msgstr "Mostra scorciatoie"
 
 #: src/shortcuts-dialog.ui:51
 msgid "Cerrar aplicación"
-msgstr "Chiudi app"
+msgstr "Chiudi applicazione"
 
 #: src/preferences-dialog.ui:19
 msgid "Calidad de Audio"
-msgstr "Qualità Audio"
+msgstr "Qualità audio"
 
 #: src/preferences-dialog.ui:20
 msgid "Formato predeterminado para nuevos proyectos"
@@ -508,7 +556,7 @@ msgstr "Formato predefinito"
 
 #: src/preferences-dialog.ui:28
 msgid "PCM / LPCM (Sin compresión)"
-msgstr "PCM / LPCM (Non compr.)"
+msgstr "PCM / LPCM (Senza compressione)"
 
 #: src/preferences-dialog.ui:41
 msgid "Sistema"
@@ -516,19 +564,31 @@ msgstr "Sistema"
 
 #: src/preferences-dialog.ui:46
 msgid "Requiere reiniciar la aplicación para aplicarse por completo"
-msgstr "Richiede il riavvio dell'app per applicarsi"
+msgstr "Richiede il riavvio dell'applicazione per essere applicato"
 
 #: src/preferences-dialog.ui:61
 msgid "Abre por defecto la última carpeta utilizada al guardar"
-msgstr "Apre l'ultima cartella usata al salvataggio"
+msgstr "Apre di default l'ultima cartella usata durante il salvataggio"
 
 #: src/preferences-dialog.ui:68
 msgid "Acelera la conversión usando todos los núcleos del procesador"
-msgstr "Usa tutti i core della CPU"
+msgstr "Velocizza la conversione usando tutti i nuclei della CPU"
 
 #: src/preferences-dialog.ui:75
 msgid "Envía un aviso de escritorio cuando finalice la generación"
-msgstr "Invia una notifica al termine della creazione"
+msgstr "Invia una notifica al termine della generazione"
 
-#~ msgid "Imagen ISO (*.iso)"
-#~ msgstr "File ISO (*.iso)"
+#~ msgid "GTK;"
+#~ msgstr "GTK;"
+
+#~ msgid "Keep the summary shorter, between 10 and 35 characters"
+#~ msgstr "Crea DVD audio Hi-Fi"
+
+#~ msgid "No description"
+#~ msgstr "Crea facilmente DVD audio ad alta fedeltà."
+
+#~ msgid "Developer name"
+#~ msgstr "Marco P. Cabrera"
+
+#~ msgid "A caption"
+#~ msgstr "Interfaccia principale dell'applicazione"

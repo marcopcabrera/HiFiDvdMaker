@@ -1,4 +1,4 @@
-# Japanese translation for HiFi Dvd Maker.
+# Japanese translation for HiFi DVD Maker.
 # Copyright (C) 2026 Marco P. Cabrera
 # Translation by Gemini AI.
 #
@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hifidvdmaker\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-27 10:46+0200\n"
-"PO-Revision-Date: 2026-09-26 20:39+0200\n"
+"POT-Creation-Date: 2026-09-30 23:30+0200\n"
+"PO-Revision-Date: 2026-10-01 05:48+0200\n"
 "Last-Translator: Gemini AI\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17,49 +17,93 @@ msgstr ""
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:2
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:7
-msgid "HiFiDvdMaker"
-msgstr "HiFiDvdMaker"
+msgid "HiFi DVD Maker"
+msgstr "HiFi DVD Maker"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:8
-msgid "GTK;"
-msgstr "GTK;"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.desktop.in:9
+msgid "Audio;DVD;Grabador;Grabadora;GTK;"
+msgstr "Audio;DVD;オーディオ;書き込み;GTK;"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:8
-msgid "Keep the summary shorter, between 10 and 35 characters"
-msgstr "Hi-FiオーディオDVDを作成"
+msgid "Crea DVDs de audio de alta fidelidad a partir de tu colección de música"
+msgstr "音楽コレクションから高音質オーディオDVDを作成"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:10
-msgid "No description"
-msgstr "説明なし"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:11
+msgid ""
+"HiFi DVD Maker es una aplicación moderna basada en GTK4 / Libadwaita diseñada para Linux "
+"que permite autorizar y crear fácilmente DVDs de audio de alta fidelidad con portadas personalizadas "
+"para tu compilación musical, listos para grabar en formato físico o reproducir directamente."
+msgstr ""
+"HiFi DVD Makerは、Linux向けに設計されたモダンなGTK4 / Libadwaitaアプリです。"
+"カスタムジャケット付きのハイファイ・オーディオDVDを簡単に作成し、"
+"直接再生やディスク作成が可能です。"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:14
-msgid "Developer name"
+msgid "Las características principales incluyen:"
+msgstr "主な機能："
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:18
+msgid ""
+"Soporte de audio de alta fidelidad: Autoría de DVDs de audio sin compresión con calidad de CD (LPCM)."
+msgstr ""
+"ハイファイオーディオ対応: CD品質(LPCM)の非圧縮オーディオDVDを作成。"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:19
+msgid "Opción de compresión AC3: Soporte de codificación opcional Dolby Digital (AC3)."
+msgstr "AC3圧縮オプション: Dolby Digital(AC3)エンコードに対応。"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:20
+msgid ""
+"Múltiples formatos de salida: Exporta como ISO o estructura VIDEO_TS, lista para grabar en un disco DVD."
+msgstr ""
+"多様な出力形式: ISO画像またはVIDEO_TSフォルダ形式で書き出し可能。"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:21
+msgid ""
+"Navegación de DVD estándar: Genera pistas y capítulos de DVD estándar para reproductores de DVD domésticos o de coche."
+msgstr ""
+"標準DVDナビゲーション: 家電や車載プレーヤー向けのトラックとチャプターを生成。"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:22
+msgid "Portada de la compilación: Muestra portadas personalizadas en pantalla."
+msgstr "コンピレーション画像: 画面上にカスタムジャケットを表示。"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:23
+msgid "Soporte multilingüe: Disponible en 12 idiomas."
+msgstr "多言語対応: 12言語に対応。"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:28
+msgid "Marco P. Cabrera"
 msgstr "Marco P. Cabrera"
 
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:52
-#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:56
-msgid "A caption"
-msgstr "A caption"
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:50
+msgid "Interfaz principal de la aplicación"
+msgstr "アプリのメイン画面"
+
+#: data/io.github.marcopcabrera.HiFiDvdMaker.metainfo.xml.in:58
+msgid "Lanzamiento público inicial."
+msgstr "最初の公開リリース。"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:7
 #: src/preferences-dialog.ui:45
 msgid "Idioma de la interfaz"
-msgstr "言語"
+msgstr "表示言語"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:8
 msgid ""
 "Código del idioma (ej. 'es', 'de', 'ja') o 'system' para usar el del sistema "
 "operativo."
-msgstr "言語コード('ja'等)かOS用'system'"
+msgstr ""
+"言語コード (例: 'ja', 'es') または OS設定を使う場合は 'system'。"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:13
 msgid "Formato de audio predeterminado"
-msgstr "既定の音声形式"
+msgstr "デフォルトの音声形式"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:18
 #: src/preferences-dialog.ui:60
 msgid "Recordar última ubicación"
-msgstr "場所を記憶"
+msgstr "最後の場所を記憶する"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:23
 #: src/preferences-dialog.ui:67
@@ -69,430 +113,434 @@ msgstr "マルチスレッド処理"
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:28
 #: src/preferences-dialog.ui:74
 msgid "Notificar al completar"
-msgstr "完了時に通知"
+msgstr "完了時に通知する"
 
 #: data/io.github.marcopcabrera.HiFiDvdMaker.gschema.xml:33
 msgid "Última carpeta de origen o destino"
-msgstr "最後のフォルダ"
+msgstr "最後の元/保存先フォルダ"
 
-#: src/window.py:174 src/window.ui:385 src/shortcuts-dialog.ui:4
+#: src/window.py:177 src/window.ui:386 src/shortcuts-dialog.ui:4
 #: src/shortcuts-dialog.ui:9
 msgid "Atajos de teclado"
-msgstr "ショートカット"
+msgstr "キーボードショートカット"
 
-#: src/window.py:182 src/window.ui:136 src/window.ui:347
+#: src/window.py:185 src/window.ui:137 src/window.ui:348
 msgid "No seleccionada"
 msgstr "未選択"
 
-#: src/window.py:288
+#: src/window.py:291
 #, python-brace-format
-msgid "{peso} / {limite} ({porcentaje}%) — ⚠️ Excede la capacidad!"
-msgstr "{peso} / {limite} ({porcentaje}%) — ⚠️ 容量超過"
+msgid "{peso} / {limite} ({porcentaje}%) — ⚠ Excede la capacidad!"
+msgstr "{peso} / {limite} ({porcentaje}%) — ⚠ 容量超過！"
 
-#: src/window.py:295
+#: src/window.py:298
 #, python-brace-format
 msgid "{peso} / {limite} ({porcentaje}%) — Duración: {tiempo}"
-msgstr "{peso} / {limite} ({porcentaje}%) — 時間: {tiempo}"
+msgstr "{peso} / {limite} ({porcentaje}%) — 再生時間: {tiempo}"
 
-#: src/window.py:317 src/window.ui:106
+#: src/window.py:320 src/window.ui:107
 msgid "No hay pistas de audio"
-msgstr "トラックなし"
+msgstr "音声トラックがありません"
 
-#: src/window.py:318 src/window.ui:107
+#: src/window.py:321 src/window.ui:108
 msgid "Usa el botón '+' superior para agregar archivos"
-msgstr "上の'+'ボタンでファイルを追加"
+msgstr "上部の '+' ボタンでファイルを追加してください"
 
-#: src/window.py:420
+#: src/window.py:423
 msgid "16:9 Ajuste perfecto"
-msgstr "16:9 適合"
+msgstr "16:9 ぴったりに調整"
 
-#: src/window.py:431 src/window.py:442
+#: src/window.py:434 src/window.py:445
 msgid "Ajustado a la pantalla"
-msgstr "画面に合わせる"
+msgstr "画面サイズに調整"
 
-#: src/window.py:545
+#: src/window.py:548
 msgid "Seleccionar Portada para el DVD (Recomendado 1024×576)"
-msgstr "カバー選択 (推奨 1024×576)"
+msgstr "DVDジャケット画像を選択 (推奨: 1024×576)"
 
-#: src/window.py:547 src/window.py:721
+#: src/window.py:550 src/window.py:738
 msgid "Seleccionar"
 msgstr "選択"
 
-#: src/window.py:551
+#: src/window.py:554
 msgid "Imágenes (*.png, *.jpg, *.jpeg, *.webp)"
-msgstr "画像 (*.png, *.jpg, *.jpeg, *.webp)"
+msgstr "画像ファイル (*.png, *.jpg, *.jpeg, *.webp)"
 
-#: src/window.py:572
+#: src/window.py:575
 msgid "Seleccionar archivos de audio"
 msgstr "音声ファイルを選択"
 
-#: src/window.py:575
+#: src/window.py:578
 msgid "Añadir"
 msgstr "追加"
 
-#: src/window.py:579
+#: src/window.py:582
 msgid "Archivos de audio (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
-msgstr "音声 (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
+msgstr "音声ファイル (*.wav, *.flac, *.mp3, *.ogg, *.m4a)"
 
-#: src/window.py:682 src/window.ui:270
+#: src/window.py:685 src/window.ui:271
 msgid "LPCM • 48 kHz / 16-bit"
 msgstr "LPCM • 48 kHz / 16-bit"
 
-#: src/window.py:685
+#: src/window.py:688
 msgid "AC3 • 448 kbps / Alta compatibilidad"
 msgstr "AC3 • 448 kbps / 高互換性"
 
-#: src/window.py:696
+#: src/window.py:699
 msgid "4.7 GB / Capa simple"
-msgstr "4.7 GB / 片面1層"
+msgstr "4.7 GB / 1層(片面)"
 
-#: src/window.py:698
+#: src/window.py:701
 msgid "8.5 GB / Doble capa"
-msgstr "8.5 GB / 片面2層"
+msgstr "8.5 GB / 2層(片面)"
 
-#: src/window.py:705 src/window.ui:255
+#: src/window.py:708 src/window.ui:256
 msgid "PAL (25 fps / 720x576)"
 msgstr "PAL (25 fps / 720x576)"
 
-#: src/window.py:707
+#: src/window.py:710
 msgid "NTSC (29.97 fps / 720x480)"
 msgstr "NTSC (29.97 fps / 720x480)"
 
-#: src/window.py:714
+#: src/window.py:717
 msgid "Guardar Imagen ISO"
-msgstr "ISO画像を保存"
+msgstr "ISOイメージを保存"
 
-#: src/window.py:715
+#: src/window.py:718
 msgid "Guardar"
 msgstr "保存"
 
-#: src/window.py:720
+#: src/window.py:723
+msgid "Archivos de imagen ISO (*.iso)"
+msgstr "ISOイメージファイル (*.iso)"
+
+#: src/window.py:737
 msgid "Seleccionar Carpeta de Salida"
-msgstr "出力フォルダを選択"
+msgstr "出力先フォルダを選択"
 
-#: src/window.py:758
+#: src/window.py:775
 msgid "Generando DVD..."
-msgstr "DVD作成中..."
+msgstr "DVDを生成中..."
 
-#: src/window.py:775 src/window.py:794
+#: src/window.py:792 src/window.py:811
 msgid "Iniciando proceso..."
-msgstr "開始中..."
+msgstr "処理を開始中..."
 
-#: src/window.py:784
+#: src/window.py:801
 msgid "Cancelar"
-msgstr "中止"
+msgstr "キャンセル"
 
-#: src/window.py:814
+#: src/window.py:831
 msgid "¿Cancelar proceso?"
-msgstr "中止しますか？"
+msgstr "処理を中止しますか？"
 
-#: src/window.py:815
+#: src/window.py:832
 msgid ""
 "Se detendrá la creación del DVD y se eliminarán los archivos temporales "
 "generados."
-msgstr "DVD作成を停止し一時ファイルを削除します。"
+msgstr ""
+"DVD作成を中止し、生成された一時ファイルを"
+"削除します。"
 
-#: src/window.py:817
+#: src/window.py:834
 msgid "Continuar"
 msgstr "続行"
 
-#: src/window.py:818
+#: src/window.py:835
 msgid "Sí, cancelar"
-msgstr "はい、中止"
+msgstr "はい、中止します"
 
-#: src/window.py:829
+#: src/window.py:846
 msgid "Cancelando y limpiando..."
-msgstr "中止と消去中..."
+msgstr "中止とクリーンアップ中..."
 
-#: src/window.py:873 src/window.py:985 src/window.ui:25
+#: src/window.py:890 src/window.py:1008 src/window.ui:26
 msgid "Crear DVD"
-msgstr "DVD作成"
+msgstr "DVDを作成"
 
-#: src/window.py:920
+#: src/window.py:943
 msgid "Procesando..."
 msgstr "処理中..."
 
-#: src/window.py:990 src/window.py:998
+#: src/window.py:1013 src/window.py:1021
 msgid "El DVD fue generado correctamente."
-msgstr "DVDが正常に作成されました。"
+msgstr "DVDが正常に生成されました。"
 
-#: src/window.py:990
+#: src/window.py:1013
 msgid "Error:"
-msgstr "Error:"
+msgstr "エラー:"
 
-#: src/window.py:996
+#: src/window.py:1019
 msgid "Proceso Completado"
-msgstr "完了"
+msgstr "処理完了"
 
-#: src/window.py:996
+#: src/window.py:1019
 msgid "Error en la Generación"
-msgstr "作成エラー"
+msgstr "生成エラー"
 
-#: src/window.py:1000
+#: src/window.py:1023
 msgid "Ocurrió un error al procesar el DVD:"
-msgstr "DVD処理中にエラーが発生:"
+msgstr "DVDの処理中にエラーが発生しました:"
 
-#: src/dvd_engine.py:47 src/dvd_engine.py:920
+#: src/dvd_engine.py:48 src/dvd_engine.py:918
 msgid "Creando disco DVD HiFi..."
-msgstr "HiFi DVDを作成中..."
+msgstr "HiFi DVDディスクを作成中..."
 
-#: src/dvd_engine.py:299
+#: src/dvd_engine.py:300
 #, python-brace-format
 msgid ""
 "El contenido ({horas}h {minutos}m) supera la capacidad máxima del {tipo}.\n"
 "Tamaño estimado: {est} | Límite disponible: {lim}.\n"
 "Sugerencia: Cambie el formato de audio a AC3 o cambie a DVD-9 de Doble Capa."
 msgstr ""
-"コンテンツ（{horas}時間{minutos}分）が{tipo}の最大容量を超えています。\n"
-"推定サイズ: {est} | 利用可能な上限: {lim}\n"
-"提案: 音声フォーマットをAC3に変更するか、2層構造のDVD-9に変更してください。"
+"コンテンツ ({horas}時間 {minutos}分) が {tipo} の容量を超えています。\n"
+"推定サイズ: {est} | 上限: {lim}\n"
+"ヒント: 音声形式をAC3に変更するか、2層のDVD-9に変更してください。"
 
-#: src/dvd_engine.py:315 src/dvd_engine.py:332 src/dvd_engine.py:449
-#: src/dvd_engine.py:471 src/dvd_engine.py:555 src/dvd_engine.py:648
+#: src/dvd_engine.py:316 src/dvd_engine.py:333 src/dvd_engine.py:450
+#: src/dvd_engine.py:472 src/dvd_engine.py:658
 msgid "Proceso cancelado por el usuario."
-msgstr "ユーザーにより取り消されました。"
+msgstr "ユーザーによって処理が取り消されました。"
 
-#: src/dvd_engine.py:352
+#: src/dvd_engine.py:353
 #, python-brace-format
 msgid "Faltan herramientas necesarias en el sistema: {herramientas}"
-msgstr "必要なツールが不足: {herramientas}"
+msgstr "必要なツールがシステムに見つかりません: {herramientas}"
 
-#: src/dvd_engine.py:428 src/dvd_engine.py:636 src/dvd_engine.py:734
-#: src/dvd_engine.py:821
+#: src/dvd_engine.py:429 src/dvd_engine.py:648 src/dvd_engine.py:738
+#: src/dvd_engine.py:823
 msgid "No hay suficiente espacio libre en disco para completar la operación."
-msgstr "空き容量が足りません。"
+msgstr "操作を完了するためのディスク空き容量が不足しています。"
 
-#: src/dvd_engine.py:432
+#: src/dvd_engine.py:433
 #, python-brace-format
 msgid "Fallo al optimizar la portada: {error}"
-msgstr "カバーエラー: {error}"
+msgstr "ジャケットの最適化に失敗しました: {error}"
 
-#: src/dvd_engine.py:563
-#, python-brace-format
-msgid "Codificando Pista {actual}/{total} ({formato})"
-msgstr "エンコード中 {actual}/{total} ({formato})"
+#: src/dvd_engine.py:571
+msgid "Codificando pistas de audio ({formato})"
+msgstr "音声トラックをエンコード中 ({formato})"
 
-#: src/dvd_engine.py:641
-#, python-brace-format
+#: src/dvd_engine.py:653
 msgid ""
-"Fallo al codificar la pista {pista_num}:\n"
+"Fallo al codificar el álbum:\n"
 "{error}"
 msgstr ""
-"トラック {pista_num} のエラー:\n"
+"アルバムのエンコードに失敗しました:\n"
 "{error}"
 
-#: src/dvd_engine.py:652
+#: src/dvd_engine.py:661
 msgid "Escribiendo tabla de capítulos nativa..."
-msgstr "章情報を書込中..."
+msgstr "チャプターテーブルを書き込み中..."
 
-#: src/dvd_engine.py:704
+#: src/dvd_engine.py:708
 msgid "No se encontró 'genisoimage' ni 'mkisofs' real en el sistema."
-msgstr "'genisoimage'か'mkisofs'がありません。"
+msgstr "システムに 'genisoimage' または 'mkisofs' が見つかりません。"
 
-#: src/dvd_engine.py:740
+#: src/dvd_engine.py:744
 #, python-brace-format
 msgid ""
 "Fallo al compilar la ISO con {herramienta}.\n"
 "Detalle:\n"
 "{detalle}"
 msgstr ""
-"ISO作成失敗 ({herramienta})\n"
+"{herramienta} によるISO作成に失敗しました。\n"
 "詳細:\n"
 "{detalle}"
 
-#: src/dvd_engine.py:758
+#: src/dvd_engine.py:762
 #, python-brace-format
 msgid "Portada no encontrada: {ruta}"
-msgstr "カバーが未発見: {ruta}"
+msgstr "ジャケット画像が見つかりません: {ruta}"
 
-#: src/dvd_engine.py:762 src/dvd_engine.py:887
+#: src/dvd_engine.py:766 src/dvd_engine.py:885
 msgid "No se especificaron archivos de audio."
-msgstr "音声ファイル未指定。"
+msgstr "音声ファイルが指定されていません。"
 
-#: src/dvd_engine.py:779
+#: src/dvd_engine.py:783
 msgid "Optimizando imagen de portada..."
-msgstr "画像を最適化中..."
+msgstr "ジャケット画像を最適化中..."
 
-#: src/dvd_engine.py:799
+#: src/dvd_engine.py:802
 msgid "Compilando estructura VIDEO_TS con dvdauthor..."
-msgstr "dvdauthorでVIDEO_TS作成中..."
+msgstr "dvdauthor で VIDEO_TS 構造を作成中..."
 
-#: src/dvd_engine.py:826
+#: src/dvd_engine.py:828
 #, python-brace-format
 msgid ""
 "dvdauthor falló al construir la estructura:\n"
 "{detalle}"
 msgstr ""
-"dvdauthor失敗:\n"
+"dvdauthor の構造構築に失敗しました:\n"
 "{detalle}"
 
-#: src/dvd_engine.py:833
+#: src/dvd_engine.py:834
 msgid "Generando ISO... (puede tardar unos minutos)"
-msgstr "ISO作成中... (時間がかかります)"
+msgstr "ISOを生成中... (数分かかる場合があります)"
 
-#: src/dvd_engine.py:852
+#: src/dvd_engine.py:851
 msgid "Guardando directorio VIDEO_TS..."
-msgstr "VIDEO_TSを保存中..."
+msgstr "VIDEO_TS フォルダを保存中..."
 
-#: src/dvd_engine.py:865
+#: src/dvd_engine.py:863
 msgid "¡Proceso completado con éxito!"
-msgstr "正常に完了しました！"
+msgstr "処理が正常に完了しました！"
 
-#: src/window.ui:37
+#: src/window.ui:38
 msgid "Menú principal"
 msgstr "メインメニュー"
 
-#: src/window.ui:72
+#: src/window.ui:73
 msgid "1. Archivos de Audio"
 msgstr "1. 音声ファイル"
 
-#: src/window.ui:73
+#: src/window.ui:74
 msgid "Formatos soportados: FLAC, WAV, MP3, OGG, M4A"
-msgstr "対応形式: FLAC, WAV, MP3, OGG, M4A"
+msgstr "対応フォーマット: FLAC, WAV, MP3, OGG, M4A"
 
-#: src/window.ui:77
+#: src/window.ui:78
 msgid "Pistas a incluir"
-msgstr "トラック"
-
-#: src/window.ui:130
-msgid "2. Imagen de Portada"
-msgstr "2. カバー画像"
+msgstr "追加するトラック"
 
 #: src/window.ui:131
+msgid "2. Imagen de Portada"
+msgstr "2. ジャケット画像"
+
+#: src/window.ui:132
 msgid "Recomendado 1024×576 px (16:9)"
 msgstr "推奨 1024×576 px (16:9)"
 
-#: src/window.ui:135
+#: src/window.ui:136
 msgid "Seleccionar carátula"
-msgstr "カバーを選択"
+msgstr "ジャケットを選択"
 
-#: src/window.ui:139
+#: src/window.ui:140
 msgid "Buscar..."
-msgstr "検索..."
-
-#: src/window.ui:180
-msgid "Sin portada seleccionada"
-msgstr "カバー未選択"
+msgstr "参照..."
 
 #: src/window.ui:181
+msgid "Sin portada seleccionada"
+msgstr "ジャケット未選択"
+
+#: src/window.ui:182
 msgid "Formatos: PNG, JPG, WEBP"
 msgstr "形式: PNG, JPG, WEBP"
 
-#: src/window.ui:211
+#: src/window.ui:212
 msgid "Vista previa en TV (16:9)"
 msgstr "TVプレビュー (16:9)"
 
-#: src/window.ui:227
+#: src/window.ui:228
 msgid "3. Ajustes de DVD y Audio"
 msgstr "3. DVD/音声設定"
 
-#: src/window.ui:254
+#: src/window.ui:255
 msgid "Norma de TV"
-msgstr "TV規格"
+msgstr "TV 映像方式"
 
-#: src/window.ui:259
+#: src/window.ui:260
 msgid "PAL (Europa)"
 msgstr "PAL (欧州)"
 
-#: src/window.ui:260
+#: src/window.ui:261
 msgid "NTSC (América / Japón)"
-msgstr "NTSC (北米/日本)"
+msgstr "NTSC (北米 / 日本)"
 
-#: src/window.ui:269
+#: src/window.ui:270
 msgid "Formato de Audio"
-msgstr "音声形式"
+msgstr "音声フォーマット"
 
-#: src/window.ui:274
+#: src/window.ui:275
 msgid "PCM (Sin compresión)"
 msgstr "PCM (非圧縮)"
 
-#: src/window.ui:275 src/preferences-dialog.ui:29
+#: src/window.ui:276 src/preferences-dialog.ui:29
 msgid "AC3 (Dolby Digital)"
 msgstr "AC3 (Dolby Digital)"
 
-#: src/window.ui:284
+#: src/window.ui:285
 msgid "Tipo de disco DVD"
-msgstr "DVD種類"
+msgstr "DVDディスクの種類"
 
-#: src/window.ui:288
+#: src/window.ui:289
 msgid "DVD-5"
 msgstr "DVD-5"
 
-#: src/window.ui:289
+#: src/window.ui:290
 msgid "DVD-9"
 msgstr "DVD-9"
 
-#: src/window.ui:298
+#: src/window.ui:299
 msgid "Espacio en disco"
 msgstr "ディスク容量"
 
-#: src/window.ui:319
-msgid "Igualar volumen"
-msgstr "音量均一化"
-
 #: src/window.ui:320
-msgid "Evita cambios bruscos (EBU R128)"
-msgstr "音量を平坦化 (EBU R128)"
+msgid "Igualar volumen"
+msgstr "音量を均一化"
 
-#: src/window.ui:332
+#: src/window.ui:321
+msgid "Evita cambios bruscos (EBU R128)"
+msgstr "急激な音量変化を防止 (EBU R128)"
+
+#: src/window.ui:333
 msgid "Formato de Salida"
 msgstr "出力形式"
 
-#: src/window.ui:336
-msgid "Imagen ISO (.iso)"
-msgstr "ISOファイル (.iso)"
-
 #: src/window.ui:337
+msgid "Imagen ISO (.iso)"
+msgstr "ISOイメージ (.iso)"
+
+#: src/window.ui:338
 msgid "Carpeta DVD (VIDEO_TS)"
 msgstr "DVDフォルダ (VIDEO_TS)"
 
-#: src/window.ui:346
+#: src/window.ui:347
 msgid "Ubicación de Destino"
-msgstr "出力先"
+msgstr "保存先"
 
-#: src/window.ui:350
+#: src/window.ui:351
 msgid "Examinar..."
 msgstr "参照..."
 
-#: src/window.ui:381 src/preferences-dialog.ui:7
+#: src/window.ui:382 src/preferences-dialog.ui:7
 msgid "Preferencias"
 msgstr "設定"
 
-#: src/window.ui:391
+#: src/window.ui:392
 msgid "Créditos"
 msgstr "情報"
 
 #: src/shortcuts-dialog.ui:12
 msgid "Acciones Principales"
-msgstr "主な操作"
+msgstr "主要アクション"
 
 #: src/shortcuts-dialog.ui:15
 msgid "Añadir pistas de audio"
-msgstr "トラック追加"
+msgstr "音声トラックを追加"
 
 #: src/shortcuts-dialog.ui:21
 msgid "Seleccionar portada"
-msgstr "カバー選択"
+msgstr "ジャケットを選択"
 
 #: src/shortcuts-dialog.ui:27
 msgid "Seleccionar destino"
-msgstr "出力先選択"
+msgstr "保存先を選択"
 
 #: src/shortcuts-dialog.ui:33
 msgid "Crear DVD / ISO"
-msgstr "DVD/ISO作成"
+msgstr "DVD / ISO を作成"
 
 #: src/shortcuts-dialog.ui:42
 msgid "Aplicación"
-msgstr "アプリ"
+msgstr "アプリケーション"
 
 #: src/shortcuts-dialog.ui:45
 msgid "Ver Atajos de teclado"
-msgstr "近道一覧"
+msgstr "ショートカット一覧"
 
 #: src/shortcuts-dialog.ui:51
 msgid "Cerrar aplicación"
-msgstr "終了"
+msgstr "アプリを終了"
 
 #: src/preferences-dialog.ui:19
 msgid "Calidad de Audio"
@@ -500,11 +548,11 @@ msgstr "音質"
 
 #: src/preferences-dialog.ui:20
 msgid "Formato predeterminado para nuevos proyectos"
-msgstr "新規用標準フォーマット"
+msgstr "新規プロジェクトのデフォルト形式"
 
 #: src/preferences-dialog.ui:24
 msgid "Formato predeterminado"
-msgstr "既定の形式"
+msgstr "デフォルト形式"
 
 #: src/preferences-dialog.ui:28
 msgid "PCM / LPCM (Sin compresión)"
@@ -516,19 +564,31 @@ msgstr "システム"
 
 #: src/preferences-dialog.ui:46
 msgid "Requiere reiniciar la aplicación para aplicarse por completo"
-msgstr "適用には再起動が必要です"
+msgstr "完全適用にはアプリの再起動が必要です"
 
 #: src/preferences-dialog.ui:61
 msgid "Abre por defecto la última carpeta utilizada al guardar"
-msgstr "保存時に直前のフォルダを開く"
+msgstr "保存時に前回使用したフォルダを開く"
 
 #: src/preferences-dialog.ui:68
 msgid "Acelera la conversión usando todos los núcleos del procesador"
-msgstr "全CPUコアを使用する"
+msgstr "全CPUコアを使って変換を高速化"
 
 #: src/preferences-dialog.ui:75
 msgid "Envía un aviso de escritorio cuando finalice la generación"
-msgstr "完了時に通知を送る"
+msgstr "生成完了時に通知を送信"
 
-#~ msgid "Imagen ISO (*.iso)"
-#~ msgstr "ISOファイル (*.iso)"
+#~ msgid "GTK;"
+#~ msgstr "GTK;"
+
+#~ msgid "Keep the summary shorter, between 10 and 35 characters"
+#~ msgstr "高音質オーディオDVDを作成"
+
+#~ msgid "No description"
+#~ msgstr "高音質オーディオDVDを簡単に作成できます。"
+
+#~ msgid "Developer name"
+#~ msgstr "Marco P. Cabrera"
+
+#~ msgid "A caption"
+#~ msgstr "アプリのメイン画面"
