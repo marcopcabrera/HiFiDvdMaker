@@ -34,7 +34,7 @@
                 {
                     "type" : "git",
                     "url" : "https://code.videolan.org/videolan/libdvdread.git",
-                    "branch" : "master"
+                    "tag" : "7.1.1"
                 }
             ]
         },
