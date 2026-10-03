@@ -3,3 +3,7 @@
 
 # Binarios compilados de traducción
 *.mo
+
+build-dir/
+repo/
+*.flatpak
