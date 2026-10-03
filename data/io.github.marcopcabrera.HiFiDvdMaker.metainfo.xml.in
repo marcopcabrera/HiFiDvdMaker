@@ -35,6 +35,10 @@
 
   <translation type="gettext">hifidvdmaker</translation>
   <launchable type="desktop-id">io.github.marcopcabrera.HiFiDvdMaker.desktop</launchable>
+
+  <!-- LÍNEA AÑADIDA: Para que la tienda enlace el icono local -->
+  <icon type="stock">io.github.marcopcabrera.HiFiDvdMaker</icon>
+
   <content_rating type="oars-1.1" />
 
   <!-- Colores de marca -->
