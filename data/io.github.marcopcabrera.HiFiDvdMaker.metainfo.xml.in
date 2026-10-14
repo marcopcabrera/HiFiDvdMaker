@@ -57,7 +57,7 @@
 
   <!-- Historial de versiones -->
   <releases>
-    <release version="0.1.0" date="2026-09-28">
+    <release version="0.1.1" date="2026-09-28">
       <description>
         <p>Initial public release.</p>
       </description>
