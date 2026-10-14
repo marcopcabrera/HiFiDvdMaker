@@ -4,6 +4,9 @@ import gettext
 import os
 import sys
 
+# --- FORZAR VISTA PREVIA ADAPTATIVA DE LIBADWAITA ---
+os.environ["ADW_DEBUG_ADAPTIVE_PREVIEW"] = "1"
+
 # --- 1. IMPORTACIONES CRÍTICAS DE GI ---
 import gi
 
@@ -137,7 +140,7 @@ class HifidvdmakerApplication(Adw.Application):
             application_name='HiFi DVD Maker',
             application_icon=APP_ID,
             developer_name='Marco P. Cabrera',
-            version='0.1.0',
+            version='0.1.1',
             copyright='© 2026 Marco P. Cabrera',
             license_type=Gtk.License.GPL_3_0,
             website='https://github.com/marcopcabrera/HiFiDvdMaker',

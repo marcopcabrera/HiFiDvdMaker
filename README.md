@@ -44,7 +44,6 @@ Make sure you have `flatpak` and `flatpak-builder` installed on your system.
 To build and install the application locally:
 
 ```bash
-
 # Clone the repository
 git clone https://github.com/marcopcabrera/HiFiDvdMaker.git
 cd HiFiDvdMaker
@@ -52,6 +51,7 @@ cd HiFiDvdMaker
 # Build and install the Flatpak package locally
 flatpak-builder --user --install --force-clean build-dir io.github.marcopcabrera.HiFiDvdMaker.json
 ```
+
 ```bash
 # Run the installed application
 flatpak run io.github.marcopcabrera.HiFiDvdMaker

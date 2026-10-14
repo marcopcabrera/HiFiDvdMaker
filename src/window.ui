@@ -3,11 +3,14 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="libadwaita" version="1.0"/>
 
-<template class="HiFiDvdMakerWindow" parent="AdwApplicationWindow">
+  <template class="HiFiDvdMakerWindow" parent="AdwApplicationWindow">
     <property name="default-width">830</property>
     <property name="default-height">895</property>
+
+    <!-- ESTE ES EL TAMAÑO MÍNIMO REAL DE LA VENTANA -->
     <property name="width-request">830</property>
-    <property name="height-request">895</property>
+    <property name="height-request">650</property>
+
     <property name="title">HiFi DVD Maker</property>
     <property name="icon-name">io.github.marcopcabrera.HiFiDvdMaker</property>
 
