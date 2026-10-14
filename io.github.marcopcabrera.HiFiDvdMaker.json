@@ -85,8 +85,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/marcopcabrera/HiFiDvdMaker.git",
-                    "branch" : "main",
-                    "commit" : "34df6d1713ec3badd782ab692739545965b17832"
+                    "branch" : "main"
                 }
             ]
         }
