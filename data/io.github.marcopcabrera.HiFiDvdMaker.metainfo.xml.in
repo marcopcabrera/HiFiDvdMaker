@@ -56,6 +56,20 @@
   </screenshots>
 
   <!-- Historial de versiones -->
+
+  <releases>
+    <release version="0.1.2" date="2026-11-12">
+      <description>
+        <p>Fix in-app language switching when installed from Flatpak/Flathub.</p>
+      </description>
+    </release>
+    <release version="0.1.1" date="2026-09-28">
+      <description>
+        <p>Initial public release.</p>
+      </description>
+    </release>
+  </releases>
+
   <releases>
     <release version="0.1.1" date="2026-09-28">
       <description>

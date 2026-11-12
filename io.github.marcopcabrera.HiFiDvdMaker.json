@@ -4,6 +4,7 @@
     "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "hifidvdmaker",
+    "separate-locales": false,
     "finish-args" : [
         "--share=ipc",
         "--socket=fallback-x11",
@@ -83,9 +84,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/marcopcabrera/HiFiDvdMaker.git",
-                    "branch" : "main"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }

@@ -1,6 +1,7 @@
 # main.py
 import ctypes
 import gettext
+import locale
 import os
 import sys
 
@@ -13,7 +14,7 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gio, GLib, Gtk, Adw
+from gi.repository import Gio, GLib, Gtk, Adw, Gdk
 
 # --- 2. IDENTIDAD DEL PROCESO EN GLIB/WAYLAND ---
 APP_ID = 'io.github.marcopcabrera.HiFiDvdMaker'
@@ -25,7 +26,7 @@ GLib.set_prgname(APP_ID)
 GLib.set_application_name('HiFi DVD Maker')
 
 
-# --- 2. CONFIGURACIÓN Y LECTURA DE IDIOMA EN GSETTINGS ---
+# --- 3. CONFIGURACIÓN Y LECTURA DE IDIOMA EN GSETTINGS ---
 LANGUAGES_MAP = [
     ('system', 'Predeterminado del sistema'),
     ('ca', 'Català'),
@@ -43,7 +44,14 @@ LANGUAGES_MAP = [
     ('zh_CN', '中文 (简体)'),
 ]
 
-# Leer preferencia e inyectar LANGUAGE en el entorno antes de inicializar GTK
+# Inicializar los locales de C (obligatorio para que glibc no ignore LANGUAGE)
+try:
+    locale.setlocale(locale.LC_ALL, '')
+except Exception:
+    pass
+
+# Leer preferencia e inyectar LANGUAGE en el entorno
+saved_lang = None
 try:
     init_settings = Gio.Settings.new(SCHEMA_ID)
     saved_lang = init_settings.get_string('language')
@@ -53,7 +61,7 @@ except Exception:
     pass
 
 
-# --- 3. RUTAS Y BINDING DE GETTEXT (C Y PYTHON) ---
+# --- 4. RUTAS Y BINDING DE GETTEXT (C Y PYTHON) ---
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL_BUILD_PO = os.path.join(PROJECT_ROOT, '_build', 'po')
 SYSTEM_LOCALE = '/app/share/locale' if os.path.exists('/app/share/locale') else '/usr/share/locale'
@@ -62,12 +70,15 @@ LOCALE_DIR = (
     LOCAL_BUILD_PO if os.path.exists(LOCAL_BUILD_PO) else SYSTEM_LOCALE
 )
 
-# Binding para C (GTK4 / Libadwaita traducen archivos .ui mediante esto)
+# Binding para C (GTK4 / Libadwaita / GtkBuilder traducen mediante esto)
 try:
     libc = ctypes.CDLL(None)
     for domain in [b'libadwaita', b'gtk40', APP_NAME.encode('utf-8')]:
         libc.bindtextdomain(domain, LOCALE_DIR.encode('utf-8'))
         libc.bind_textdomain_codeset(domain, b'UTF-8')
+    libc.textdomain(APP_NAME.encode('utf-8'))
+    if saved_lang and saved_lang != 'system':
+        libc.setenv(b'LANGUAGE', saved_lang.encode('utf-8'), 1)
 except Exception:
     pass
 
@@ -76,8 +87,7 @@ try:
     gettext.bindtextdomain(APP_NAME, LOCALE_DIR)
     gettext.textdomain(APP_NAME)
 
-    lang = os.environ.get('LANGUAGE')
-    languages = [lang] if lang else None
+    languages = [saved_lang] if (saved_lang and saved_lang != 'system') else None
 
     trans = gettext.translation(APP_NAME, localedir=LOCALE_DIR, languages=languages, fallback=True)
     trans.install()
@@ -85,15 +95,7 @@ try:
 except Exception:
     _ = lambda s: s
 
-
-# --- 4. INICIALIZACIÓN DE GTK / LIBADWAITA ---
-import gi
-
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-
-from gi.repository import Adw, Gdk, Gtk
-
+# Importar ventana principal tras configurar los idiomas
 from .window import HiFiDvdMakerWindow
 
 
@@ -104,7 +106,7 @@ class HifidvdmakerApplication(Adw.Application):
         super().__init__(
             application_id=APP_ID,
             flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
-            resource_base_path='/io/github/marcopcabrera/HiFiDvdMaker',
+            resource_base_path='/io/github/marcopcabrera/hifidvdmaker',
         )
 
         self.settings = Gio.Settings.new(SCHEMA_ID)
@@ -132,7 +134,7 @@ class HifidvdmakerApplication(Adw.Application):
         win = self.props.active_window
         if not win:
             win = HiFiDvdMakerWindow(application=self)
-            self.add_window(win)  # <--- Vincular explícitamente la ventana a la app
+            self.add_window(win)
         win.present()
 
     def on_about_action(self, *args):
@@ -140,7 +142,7 @@ class HifidvdmakerApplication(Adw.Application):
             application_name='HiFi DVD Maker',
             application_icon=APP_ID,
             developer_name='Marco P. Cabrera',
-            version='0.1.1',
+            version='0.1.2',
             copyright='© 2026 Marco P. Cabrera',
             license_type=Gtk.License.GPL_3_0,
             website='https://github.com/marcopcabrera/HiFiDvdMaker',
@@ -232,10 +234,8 @@ class HifidvdmakerApplication(Adw.Application):
 
 
 def main(version=None):
-    # La inicialización del entorno visual ocurre cuando la identidad de proceso ya está registrada
     Adw.init()
 
-    # Iconos locales
     display = Gdk.Display.get_default()
     if display:
         icon_theme = Gtk.IconTheme.get_for_display(display)
